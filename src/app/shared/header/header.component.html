@@ -26,7 +26,7 @@
         </li>
         <ng-container *ngFor="let item of menuItems">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" *ngIf="!item.subItems"
+            <a class="nav-link" *ngIf="!item.subItems"
                 (click)="onMenuClick($event)" href="javascript: void(0);" id="topnav-components"
                 routerLink="{{item.link}}" role="button">
                 {{ item.label}}

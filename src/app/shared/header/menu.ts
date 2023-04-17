@@ -1,6 +1,11 @@
 import { MenuItem } from './menu.model';
 
 export const MENU: MenuItem[] = [
+  {
+    id: 30,
+    label: 'Home',
+    link: '/'
+  },
     {
         id: 1,
         label: 'Home',
