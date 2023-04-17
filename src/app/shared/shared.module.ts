@@ -10,12 +10,15 @@ import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
+import { ConnectWalletButtonComponent } from './components/connect-wallet-button/connect-wallet-button.component';
+import {CorePipesModule} from "../core/pipes/pipes.module";
 
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
-    BreadcrumbsComponent
+    BreadcrumbsComponent,
+    ConnectWalletButtonComponent
   ],
   imports: [
     CommonModule,
@@ -23,7 +26,8 @@ import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
     FormsModule,
     ReactiveFormsModule,
     NgbDropdownModule,
-    ScrollToModule.forRoot()
+    ScrollToModule.forRoot(),
+    CorePipesModule
   ],
   exports: [HeaderComponent, FooterComponent, BreadcrumbsComponent]
 })

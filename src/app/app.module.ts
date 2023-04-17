@@ -19,3 +19,10 @@ import { PagesModule } from "./pages/pages.module";
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+declare global {
+  interface Window {
+    web3:any;
+    ethereum:any;
+  }
+}
