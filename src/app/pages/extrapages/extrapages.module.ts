@@ -20,12 +20,14 @@ import { ContactsComponent } from './contacts/contacts.component';
 
 // Order By Sorting
 import { SortByExtraPagePipe } from "../extrapages/sort-by.pipe";
+import { Page404Component } from './page404/page404.component';
 
 @NgModule({
   declarations: [
     AboutComponent,
     ContactsComponent,
-    SortByExtraPagePipe
+    SortByExtraPagePipe,
+    Page404Component
   ],
   imports: [
     CommonModule,

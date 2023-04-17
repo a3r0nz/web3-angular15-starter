@@ -11,9 +11,7 @@ describe('Page404Component', () => {
       declarations: [ Page404Component ]
     })
     .compileComponents();
-  });
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(Page404Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
