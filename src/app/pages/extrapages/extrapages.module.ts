@@ -16,11 +16,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { ExtraPagesRoutingModule } from "./extrapages-routing.module";
 import { SharedModule } from "../../shared/shared.module";
 import { AboutComponent } from './about/about.component';
-import { BlogGridComponent } from './blog-grid/blog-grid.component';
-import { SingleBlogComponent } from './single-blog/single-blog.component';
 import { ContactsComponent } from './contacts/contacts.component';
-import { HelpCenterComponent } from './help-center/help-center.component';
-import { SingleTopicComponent } from './single-topic/single-topic.component';
 
 // Order By Sorting
 import { SortByExtraPagePipe } from "../extrapages/sort-by.pipe";
@@ -28,11 +24,7 @@ import { SortByExtraPagePipe } from "../extrapages/sort-by.pipe";
 @NgModule({
   declarations: [
     AboutComponent,
-    BlogGridComponent,
-    SingleBlogComponent,
     ContactsComponent,
-    HelpCenterComponent,
-    SingleTopicComponent,
     SortByExtraPagePipe
   ],
   imports: [

@@ -1,24 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { Home1Component } from "./dashboard/home1/home1.component";
+import {HomeComponent} from "./home/home.component";
 
 const routes: Routes = [
   {
     path: "",
-    component: Home1Component
+    component: HomeComponent
   },
   {
-    path: '', loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
-  },
-  {
-    path: 'catalog', loadChildren: () => import('./catalog/catalog.module').then(m => m.CatalogModule)
-  },
-  {
-    path: 'account', loadChildren: () => import('./account/account.module').then(m => m.AccountModule)
-  },
-  {
-    path: 'vendor', loadChildren: () => import('./vendor/vendor.module').then(m => m.VendorModule)
+    path: '', loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
   },
   {
     path: 'pages', loadChildren: () => import('./extrapages/extrapages.module').then(m => m.ExtrapagesModule)
