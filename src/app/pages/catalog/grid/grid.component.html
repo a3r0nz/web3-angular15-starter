@@ -1,0 +1,379 @@
+<main class="page-wrapper">
+  <!-- Header-->
+  <app-header id="top"></app-header>
+
+  <!-- Page container-->
+  <div class="container-fluid mt-5 pt-5 p-0">
+    <div class="row g-0 mt-n3">
+      <!-- Filters sidebar (Offcanvas on mobile)-->
+      <aside class="col-lg-4 col-xl-3 border-top-lg border-end-lg shadow-sm px-3 px-xl-4 px-xxl-5 pt-lg-2">
+        <div class="offcanvas offcanvas-start offcanvas-collapse" id="filters-sidebar">
+          <div class="offcanvas-header d-flex d-lg-none align-items-center">
+            <h2 class="h5 mb-0">Filters</h2>
+            <button class="btn-close" type="button" data-bs-dismiss="offcanvas" (click)="SidebarHide()"></button>
+          </div>
+          <!-- Search form-->
+          <div class="offcanvas-header d-block border-bottom pt-0 pt-lg-4 px-lg-0">
+            <div class="form-group mb-lg-2 rounded-pill">
+              <div class="input-group"><span class="input-group-text text-muted"><i class="fi-search"></i></span>
+                <input class="form-control" type="text" placeholder="Search..." [(ngModel)]="term">
+              </div>
+              <button class="btn btn-primary rounded-pill d-lg-inline-block d-none" type="button">Search</button>
+              <button class="btn btn-icon btn-primary rounded-circle flex-shrink-0 d-lg-none d-inline-flex" type="button"><i class="fi-search mt-n2"></i></button>
+            </div>
+          </div>
+          <!-- Nav tabs-->
+          <div class="offcanvas-header d-block border-bottom py-lg-4 py-3 px-lg-0">
+            <ul ngbNav #nav="ngbNav" [activeId]="1" class="nav nav-pills">
+              <li [ngbNavItem]="1" class="nav-item">
+                <a ngbNavLink>
+                  <i class="fi-list me-2"></i>Categories
+                </a>
+                <ng-template ngbNavContent>
+                  <!-- Categories-->
+                  <div class="tab-pane fade show active" id="categories" role="tabpanel">
+                    <div class="row row-cols-lg-2 row-cols-1 g-3">
+                      <div class="col"><a class="icon-box card card-body h-100 border-0 shadow-sm card-hover text-center" href="javascript:void(0);" (click)="categoryClick($event,'Accomodation')">
+                          <div class="icon-box-media bg-faded-accent text-accent rounded-circle mb-3 mx-auto"><i class="fi-bed"></i></div>
+                          <h3 class="icon-box-title fs-base mb-0">Accommodation</h3></a></div>
+                      <div class="col"><a class="icon-box card card-body h-100 border-0 shadow-sm card-hover text-center" href="javascript:void(0);" (click)="categoryClick($event,'Fitness & Sport')">
+                          <div class="icon-box-media bg-faded-primary text-primary rounded-circle mb-3 mx-auto"><i class="fi-dumbell"></i></div>
+                          <h3 class="icon-box-title fs-base mb-0">Fitness &amp; Sport</h3></a></div>
+                      <div class="col"><a class="icon-box card card-body h-100 border-0 shadow-sm card-hover text-center" href="javascript:void(0);" (click)="categoryClick($event,'Food & Drink')">
+                          <div class="icon-box-media bg-faded-warning text-warning rounded-circle mb-3 mx-auto"><i class="fi-cafe"></i></div>
+                          <h3 class="icon-box-title fs-base mb-0">Food &amp; Drink</h3></a></div>
+                      <div class="col"><a class="icon-box card card-body h-100 border-0 shadow-sm card-hover text-center" href="javascript:void(0);" (click)="categoryClick($event,'Night Life')">
+                          <div class="icon-box-media bg-faded-success text-success rounded-circle mb-3 mx-auto"><i class="fi-disco-ball"></i></div>
+                          <h3 class="icon-box-title fs-base mb-0">Night Life</h3></a></div>
+                      <div class="col"><a class="icon-box card card-body h-100 border-0 shadow-sm card-hover text-center" href="javascript:void(0);" (click)="categoryClick($event,'Shopping')">
+                          <div class="icon-box-media bg-faded-primary text-primary rounded-circle mb-3 mx-auto"><i class="fi-shopping-bag"></i></div>
+                          <h3 class="icon-box-title fs-base mb-0">Shopping</h3></a></div>
+                      <div class="col"><a class="icon-box card card-body h-100 border-0 shadow-sm card-hover text-center" href="javascript:void(0);" (click)="categoryClick($event,'Medicine')">
+                          <div class="icon-box-media bg-faded-info text-info rounded-circle mb-3 mx-auto"><i class="fi-meds"></i></div>
+                          <h3 class="icon-box-title fs-base mb-0">Medicine</h3></a></div>
+                      <div class="col"><a class="icon-box card card-body h-100 border-0 shadow-sm card-hover text-center" href="javascript:void(0);" (click)="categoryClick($event,'Art & History')">
+                          <div class="icon-box-media bg-faded-success text-success rounded-circle mb-3 mx-auto"><i class="fi-museum"></i></div>
+                          <h3 class="icon-box-title fs-base mb-0">Art &amp; History</h3></a></div>
+                      <div class="col"><a class="icon-box card card-body h-100 border-0 shadow-sm card-hover text-center" href="javascript:void(0);" (click)="categoryClick($event,'Beauty')">
+                          <div class="icon-box-media bg-faded-warning text-warning rounded-circle mb-3 mx-auto"><i class="fi-makeup"></i></div>
+                          <h3 class="icon-box-title fs-base mb-0">Beauty</h3></a></div>
+                      <div class="col"><a class="icon-box card card-body h-100 border-0 shadow-sm card-hover text-center" href="javascript:void(0);" (click)="categoryClick($event,'Entertainment')">
+                          <div class="icon-box-media bg-faded-primary text-primary rounded-circle mb-3 mx-auto"><i class="fi-entertainment"></i></div>
+                          <h3 class="icon-box-title fs-base mb-0">Entertainment</h3></a></div>
+                      <div class="col"><a class="icon-box card card-body h-100 border-0 shadow-sm card-hover text-center" href="javascript:void(0);" (click)="categoryClick($event,'Auto Service')">
+                          <div class="icon-box-media bg-faded-info text-info rounded-circle mb-3 mx-auto"><i class="fi-car"></i></div>
+                          <h3 class="icon-box-title fs-base mb-0">Auto Service</h3></a></div>
+                    </div>
+                  </div>
+                </ng-template>
+              </li>
+              <li [ngbNavItem]="2" class="nav-item">
+                <a ngbNavLink>
+                  <i class="fi-filter-alt-horizontal me-2"></i>Filters
+                </a>
+                <ng-template ngbNavContent>
+                  <!-- Filters-->
+                  <div class="tab-pane fade show active" id="filters" role="tabpanel">
+                    <div class="pb-4 mb-2">
+                      <h3 class="h6">Location</h3>
+                      <select class="form-select mb-2" id="location" (click)="LocationSearch();">
+                        <option value="" disabled>Choose city</option>
+                        <option value="Berlin" selected>Berlin</option>
+                        <option value="Hamburg">Hamburg</option>
+                        <option value="Munich">Munich</option>
+                        <option value="Koln">Koln</option>
+                        <option value="Frankfurt am Main">Frankfurt am Main</option>
+                      </select>
+                      <select class="form-select" id="district" (click)="DistrictSearch();">
+                        <option value="" selected disabled>Choose district</option>
+                        <option value="Berlin-Mitte">Berlin-Mitte</option>
+                        <option value="Charlottenburg">Charlottenburg</option>
+                        <option value="Prenzlauer Berg">Prenzlauer Berg</option>
+                        <option value="Friedrichshain">Friedrichshain</option>
+                        <option value="Kreuzberg">Kreuzberg</option>
+                      </select>
+                    </div>
+                    <div class="pb-4 mb-2">
+                      <h3 class="h6">Category</h3>
+                      <div class="dropdown mb-sm-0 mb-3" data-bs-toggle="select" ngbDropdown>
+                        <button class="btn btn-outline-secondary d-flex align-items-center w-100 px-4 fw-normal text-start dropdown-toggle" type="button" data-bs-toggle="dropdown" ngbDropdownToggle><i class="fi-list me-2 text-muted"></i><span class="dropdown-toggle-label d-block w-100 categories">All categories</span></button>
+                        <input type="hidden">
+                        <ul class="dropdown-menu w-100" ngbDropdownMenu (click)="categoryDownClick($event)">
+                          <li><a class="dropdown-item" href="javascript:void(0);"><i class="fi-bed me-2 fs-lg opacity-60"></i><span class="dropdown-item-label">Accomodation</span></a></li>
+                          <li><a class="dropdown-item" href="javascript:void(0);"><i class="fi-cafe me-2 fs-lg opacity-60"></i><span class="dropdown-item-label">Food &amp; Drink</span></a></li>
+                          <li><a class="dropdown-item" href="javascript:void(0);"><i class="fi-shopping-bag me-2 fs-lg opacity-60"></i><span class="dropdown-item-label">Shopping</span></a></li>
+                          <li><a class="dropdown-item" href="javascript:void(0);"><i class="fi-museum me-2 fs-lg opacity-60"></i><span class="dropdown-item-label">Art &amp; History</span></a></li>
+                          <li><a class="dropdown-item" href="javascript:void(0);"><i class="fi-entertainment me-2 fs-lg opacity-60"></i><span class="dropdown-item-label">Entertainment</span></a></li>
+                          <li><a class="dropdown-item" href="javascript:void(0);"><i class="fi-meds me-2 fs-lg opacity-60"></i><span class="dropdown-item-label">Medicine</span></a></li>
+                          <li><a class="dropdown-item" href="javascript:void(0);"><i class="fi-makeup me-2 fs-lg opacity-60"></i><span class="dropdown-item-label">Beauty</span></a></li>
+                          <li><a class="dropdown-item" href="javascript:void(0);"><i class="fi-car me-2 fs-lg opacity-60"></i><span class="dropdown-item-label">Auto Service</span></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="pb-4 mb-2">
+                      <h3 class="h6">Subcategory</h3>
+                      <ngx-simplebar style="height: 11rem;" class="overflow-auto simplebar-scroll-show">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="hotel" (change)="changeProperty($event,'Hotel')">
+                          <label class="form-check-label fs-sm" for="hotel">Hotel</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="hostel" (change)="changeProperty($event,'Hostel')">
+                          <label class="form-check-label fs-sm" for="hostel">Hostel</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="motel" (change)="changeProperty($event,'Motel')">
+                          <label class="form-check-label fs-sm" for="motel">Motel</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="apartment" (change)="changeProperty($event,'Apartment')">
+                          <label class="form-check-label fs-sm" for="apartment">Apartment</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="cottage" (change)="changeProperty($event,'Cottage')">
+                          <label class="form-check-label fs-sm" for="cottage">Cottage</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="boutique-hotel" (change)="changeProperty($event,'Boutique Hotel')">
+                          <label class="form-check-label fs-sm" for="boutique-hotel">Boutique Hotel</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="room" (change)="changeProperty($event,'Room')">
+                          <label class="form-check-label fs-sm" for="room">Room</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="land" (change)="changeProperty($event,'Land')">
+                          <label class="form-check-label fs-sm" for="land">Land</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="commercial" (change)="changeProperty($event,'Commercial')">
+                          <label class="form-check-label fs-sm" for="commercial">Commercial</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="parking-lot" (change)="changeProperty($event,'Parking lot')">
+                          <label class="form-check-label fs-sm" for="parking-lot">Parking lot</label>
+                        </div>
+                      </ngx-simplebar>
+                    </div>
+                    <div class="pb-4 mb-2">
+                      <h3 class="h6">Price</h3>
+                      <div class="range-slider" data-start-min="300" data-start-max="700" data-min="50" data-max="1000" data-step="20">
+                        <ngx-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options" (valueChange)="valueChange($event,true)" (highValueChange)="valueChange($event,false)"></ngx-slider>
+                        <div class="d-flex align-items-center">
+                          <div class="w-50 pe-2">
+                            <div class="input-group"><span class="input-group-text fs-base">$</span>
+                              <input class="form-control range-slider-value-min" type="text" value="{{minValue}}">
+                            </div>
+                          </div>
+                          <div class="text-muted">&mdash;</div>
+                          <div class="w-50 ps-2">
+                            <div class="input-group"><span class="input-group-text fs-base">$</span>
+                              <input class="form-control range-slider-value-max" type="text" value="{{maxValue}}">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="pb-4 mb-2">
+                      <h3 class="h6">Average rating</h3>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="5-star" (change)="changeRating($event,5)">
+                        <label class="form-check-label fs-sm align-middle mt-n2" for="5-star"><span class="star-rating"><i class="star-rating-icon fi-star-filled active"></i><i class="star-rating-icon fi-star-filled active"></i><i class="star-rating-icon fi-star-filled active"></i><i class="star-rating-icon fi-star-filled active"></i><i class="star-rating-icon fi-star-filled active"></i></span>
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="4-star" (change)="changeRating($event,4)">
+                        <label class="form-check-label fs-sm align-middle mt-n2" for="4-star"><span class="star-rating"><i class="star-rating-icon fi-star-filled active"></i><i class="star-rating-icon fi-star-filled active"></i><i class="star-rating-icon fi-star-filled active"></i><i class="star-rating-icon fi-star-filled active"></i><i class="star-rating-icon fi-star"></i></span>
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="3-star" (change)="changeRating($event,3)">
+                        <label class="form-check-label fs-sm align-middle mt-n2" for="3-star"><span class="star-rating"><i class="star-rating-icon fi-star-filled active"></i><i class="star-rating-icon fi-star-filled active"></i><i class="star-rating-icon fi-star-filled active"></i><i class="star-rating-icon fi-star"></i><i class="star-rating-icon fi-star"></i></span>
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="2-star" (change)="changeRating($event,2)">
+                        <label class="form-check-label fs-sm align-middle mt-n2" for="2-star"><span class="star-rating"><i class="star-rating-icon fi-star-filled active"></i><i class="star-rating-icon fi-star-filled active"></i><i class="star-rating-icon fi-star"></i><i class="star-rating-icon fi-star"></i><i class="star-rating-icon fi-star"></i></span>
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="1-star" (change)="changeRating($event,1)">
+                        <label class="form-check-label fs-sm align-middle mt-n2" for="1-star"><span class="star-rating"><i class="star-rating-icon fi-star-filled active"></i><i class="star-rating-icon fi-star"></i><i class="star-rating-icon fi-star"></i><i class="star-rating-icon fi-star"></i><i class="star-rating-icon fi-star"></i></span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="pb-4 mb-2">
+                      <h3 class="h6">Number of rooms</h3>
+                      <select class="form-select mb-2" id="rooms" (click)="RoomsFilters();">
+                        <option value="1-room" selected>1 room</option>
+                        <option value="2-rooms">2 rooms</option>
+                        <option value="3-rooms">3 rooms</option>
+                        <option value="4-rooms">4 rooms</option>
+                        <option value="5-rooms">5 rooms</option>
+                      </select>
+                    </div>
+                    <div class="pb-4 mb-2">
+                      <h3 class="h6">Amenities</h3>
+                      <ngx-simplebar style="height: 11rem;" class="overflow-auto simplebar-scroll-show">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="parking" (change)="AmenitiesFilter($event,'parking')">
+                          <label class="form-check-label fs-sm" for="parking">Parking</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="restaurant" (change)="AmenitiesFilter($event,'restaurant')">
+                          <label class="form-check-label fs-sm" for="restaurant">Restaurant</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="pet-friendly" (change)="AmenitiesFilter($event,'pet-friendly')">
+                          <label class="form-check-label fs-sm" for="pet-friendly">Pet Friendly</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="room-service" (change)="AmenitiesFilter($event,'room-service')">
+                          <label class="form-check-label fs-sm" for="room-service">Room Service</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="fitness-center" (change)="AmenitiesFilter($event,'fitness-center')">
+                          <label class="form-check-label fs-sm" for="fitness-center">Fitness Center</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="free-wifi" (change)="AmenitiesFilter($event,'free-wifi')">
+                          <label class="form-check-label fs-sm" for="free-wifi">Free WiFi</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="spa-lounge" (change)="AmenitiesFilter($event,'spa-lounge')">
+                          <label class="form-check-label fs-sm" for="spa-lounge">Spa lounge</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="bar" (change)="AmenitiesFilter($event,'bar')">
+                          <label class="form-check-label fs-sm" for="bar">Bar</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="swimming-pool" (change)="AmenitiesFilter($event,'swimming-pool')">
+                          <label class="form-check-label fs-sm" for="swimming-pool">Swimming pool</label>
+                        </div>
+                      </ngx-simplebar>
+                    </div>
+                    <div class="pb-4 mb-2">
+                      <h3 class="h6">Room facilities</h3>
+                      <ngx-simplebar style="height: 11rem;" class="overflow-auto simplebar-scroll-show">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="kitchen" (change)="facilitiesFilter($event,'kitchen')">
+                          <label class="form-check-label fs-sm" for="kitchen">Kitchen</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="private-bathroom" (change)="facilitiesFilter($event,'private-bathroom')">
+                          <label class="form-check-label fs-sm" for="private-bathroom">Private Bathroom</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="air-conditioning" (change)="facilitiesFilter($event,'air-conditioning')">
+                          <label class="form-check-label fs-sm" for="air-conditioning">Air Conditioning</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="desk" (change)="facilitiesFilter($event,'desk')">
+                          <label class="form-check-label fs-sm" for="desk">Desk</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="terrace" (change)="facilitiesFilter($event,'terrace')">
+                          <label class="form-check-label fs-sm" for="terrace">Terrace</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="washing-machine" (change)="facilitiesFilter($event,'washing-machine')">
+                          <label class="form-check-label fs-sm" for="washing-machine">Washing Machine</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="heating" (change)="facilitiesFilter($event,'heating')">
+                          <label class="form-check-label fs-sm" for="heating">Heating</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="laundry-service" (change)="facilitiesFilter($event,'laundry-service')">
+                          <label class="form-check-label fs-sm" for="laundry-service">Laundry Service</label>
+                        </div>
+                      </ngx-simplebar>
+                    </div>
+                    <div class="border-top py-4">
+                      <button class="btn btn-outline-primary rounded-pill" type="button"><i class="fi-rotate-right me-2"></i>Reset filters</button>
+                    </div>
+                  </div>
+                </ng-template>
+              </li>
+            </ul>
+          </div>
+          <div class="offcanvas-body py-lg-4">
+            <!-- Tabs content-->
+            <div class="tab-content">
+              <div [ngbNavOutlet]="nav"></div>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- Page content-->
+      <div class="col-lg-8 col-xl-9 position-relative overflow-hidden pb-5 pt-4 px-3 px-xl-4 px-xxl-5">
+        <!-- Map popup-->
+        <div class="map-popup invisible" id="map">
+          <button class="btn btn-icon btn-light btn-sm shadow-sm rounded-circle" type="button" data-bs-toggle-class="invisible" data-bs-target="#map" (click)="closeMapModel()"><i class="fi-x fs-xs"></i></button>
+          <agm-map [latitude]="latitude" [longitude]="longitude" class="interactive-map rounded-3" style="height: 100%"></agm-map>
+        </div>
+        <!-- Breadcrumb-->
+        <app-breadcrumbs [breadcrumbItems]="breadCrumbItems"></app-breadcrumbs>
+        <!-- Title-->
+        <div class="d-sm-flex align-items-center justify-content-between pb-3 pb-sm-4">
+          <h1 class="h2 mb-sm-0">Find accommodation</h1><a class="d-inline-block fw-bold text-decoration-none py-1" href="javascript:void(0);" data-bs-toggle-class="invisible" data-bs-target="#map" (click)="openMapModal()"><i class="fi-map me-2"></i>Map view</a>
+        </div>
+        <!-- Sorting-->
+        <div class="d-flex flex-sm-row flex-column align-items-sm-center align-items-stretch my-2">
+          <div class="d-flex align-items-center flex-shrink-0">
+            <label class="fs-sm me-2 pe-1 text-nowrap" for="sortby"><i class="fi-arrows-sort text-muted mt-n1 me-2"></i>Sort by:</label>
+            <select class="form-select form-select-sm" id="sortby" (click)="SortFilter();">
+              <option>Newest</option>
+              <option value="Atitle">Popularity</option>
+              <option value="Dprice">Low - High Price</option>
+              <option value="Aprice">High - Low Price</option>
+              <option value="Arating">High rating</option>
+              <option value="Drating">Average Rating</option>
+            </select>
+          </div>
+          <hr class="d-none d-sm-block w-100 mx-4">
+          <div class="d-none d-sm-flex align-items-center flex-shrink-0 text-muted"><i class="fi-check-circle me-2"></i><span class="fs-sm mt-n1">{{dataCount}} results</span></div>
+        </div>
+        <!-- Catalog grid-->
+        <div class="row row-cols-xl-3 row-cols-sm-2 row-cols-1 gy-4 gx-3 gx-xxl-4 py-4">
+          <!-- Item-->
+          <div class="col pb-sm-2" *ngFor="let data of gridDatas | filter:term | sortBy:sortBy:sortField">
+            <article class="position-relative">
+              <div class="position-relative mb-3">
+                <button class="btn btn-icon btn-light-primary btn-xs text-primary rounded-circle position-absolute top-0 end-0 m-3 zindex-5" type="button" placement="left" ngbTooltip="Add to Favorites"><i class="fi-heart"></i></button>
+                <img class="rounded-3" src="{{data.image}}" alt="Article img">
+              </div>
+              <h3 class="mb-2 fs-lg"><a class="nav-link stretched-link" routerLink="/catalog/single">{{data.title}}</a></h3>
+              <ul class="list-inline mb-0 fs-xs">
+                <li class="list-inline-item pe-1"><i class="fi-star-filled mt-n1 me-1 fs-base text-warning align-middle"></i><b>{{data.rating}}</b><span class="text-muted">&nbsp;({{data.people_count}})</span></li>
+                <li class="list-inline-item pe-1"><i class="fi-credit-card mt-n1 me-1 fs-base text-muted align-middle"></i>${{data.price}}</li>
+                <li class="list-inline-item pe-1"><i class="fi-map-pin mt-n1 me-1 fs-base text-muted align-middle"></i>{{data.location}} km from center</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+        <!-- Pagination-->
+        <nav class="border-top pb-md-4 pt-4" aria-label="Pagination">
+          <ul class="pagination mb-1">
+            <li class="page-item d-sm-none"><span class="page-link page-link-static">1 / 5</span></li>
+            <li class="page-item active d-none d-sm-block" aria-current="page"><span class="page-link">1<span class="visually-hidden">(current)</span></span></li>
+            <li class="page-item d-none d-sm-block"><a class="page-link" href="javascript:void(0);">2</a></li>
+            <li class="page-item d-none d-sm-block"><a class="page-link" href="javascript:void(0);">3</a></li>
+            <li class="page-item d-none d-sm-block">...</li>
+            <li class="page-item d-none d-sm-block"><a class="page-link" href="javascript:void(0);">8</a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0);" aria-label="Next"><i class="fi-chevron-right"></i></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  </main>
+
+<!-- Footer-->
+<app-footer></app-footer>
+
+<!-- Filters sidebar toggle button (mobile)-->
+<button class="btn btn-primary btn-sm w-100 rounded-0 fixed-bottom d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#filters-sidebar" (click)="FilterSidebar()"><i class="fi-filter me-2"></i>Filters</button>
+<div class="vertical-overlay" (click)="SidebarHide()"></div>

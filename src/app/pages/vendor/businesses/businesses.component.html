@@ -1,0 +1,84 @@
+<main class="page-wrapper">
+  <!-- Header-->
+  <app-header (window:scroll)="windowScroll()" id="top"></app-header>
+
+  <!-- Page container-->
+  <div class="container mt-5 mb-md-4 py-5">
+    <!-- Breadcrumbs-->
+    <app-breadcrumbs [breadcrumbItems]="breadCrumbItems"></app-breadcrumbs>
+    <!-- Page title + Sorting-->
+    <div class="d-flex flex-sm-row flex-column align-items-sm-center align-items-stretch justify-content-between pb-4 mb-2 mb-md-3">
+      <h1 class="h2 mb-sm-0">My businesses</h1>
+      <div class="d-flex align-items-center ms-sm-4">
+        <label class="fs-sm me-2 pe-1 text-nowrap" for="sortby"><i class="fi-arrows-sort text-muted mt-n1 me-2"></i>Sort by:</label>
+        <select class="form-select form-select-sm" id="sortby" (click)="SortFilter();">
+          <option value="">Newest</option>
+          <option value="Atitle">Oldest</option>
+          <option value="Dtitle">Popularity</option>
+          <option value="Drating">High rating</option>
+          <option value="Arating">Low rating</option>
+        </select>
+      </div>
+    </div>
+    <div class="card p-sm-4 border-0 shadow-sm">
+      <div class="card-body">
+        <div class="row">
+          <!-- Sidebar-->
+          <aside class="col-lg-3 col-md-4 mb-lg-0 mb-4 pb-2 pe-xl-5">
+            <ul class="nav flex-column mb-4 pb-lg-3">
+              <li class="nav-item">
+                <a class="nav-link py-1 px-0 fs-sm fw-normal" href="javascript:void(0);" (click)="categoryClick($event,'Accommodation')">
+                  <i class="fi-bed mt-n1 me-2 fs-base align-middle opacity-70"></i>Accommodation
+                  <span class="float-end text-muted">(4)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link py-1 px-0 fs-sm fw-normal" href="javascript:void(0);" (click)="categoryClick($event,'Food & Drink')">
+                  <i class="fi-cafe mt-n1 me-2 fs-base align-middle opacity-70"></i>Food &amp; Drink
+                  <span class="float-end text-muted">(1)</span>
+                </a>
+              </li>
+            </ul><a class="btn btn-primary rounded-pill" routerLink="/vendor/add-business"><i class="fi-plus me-2"></i>Add new business</a>
+          </aside>
+          <!-- Grid-->
+          <div class="col-lg-9 col-md-8">
+            <div class="row row-cols-md-2 row-cols-lg-3 row-cols-sm-2 row-cols-1 g-3 g-xl-4">
+              <!-- Item-->
+              <div class="col pb-2" *ngFor="let data of gridDatas | sortBy:sortBy:sortField">
+                <div class="position-relative">
+                  <div class="position-relative mb-3">
+                    <div class="dropdown position-absolute zindex-5 top-0 end-0 mt-3 me-3" ngbDropdown>
+                      <button class="btn btn-icon btn-light btn-xs rounded-circle shadow-sm arrow-none" type="button" id="contextMenu1" data-bs-toggle="dropdown" aria-expanded="false" ngbDropdownToggle><i class="fi-dots-vertical"></i></button>
+                      <ul class="dropdown-menu dropdown-menu-end my-1" aria-labelledby="contextMenu1" ngbDropdownMenu>
+                        <li>
+                          <button class="dropdown-item" type="button"><i class="fi-edit opacity-60 me-2"></i>Edit</button>
+                        </li>
+                        <li>
+                          <button class="dropdown-item" type="button"><i class="fi-flame opacity-60 me-2"></i>Promote</button>
+                        </li>
+                        <li>
+                          <button class="dropdown-item" type="button"><i class="fi-power opacity-60 me-2"></i>Deactivate</button>
+                        </li>
+                        <li>
+                          <button class="dropdown-item" type="button"><i class="fi-trash opacity-60 me-2"></i>Delete</button>
+                        </li>
+                      </ul>
+                    </div><img class="rounded-3" src="{{data.image}}" alt="Image">
+                  </div>
+                  <h3 class="mb-2 fs-lg"><a class="nav-link stretched-link" routerLink="/catalog/single">{{data.title}}</a></h3>
+                  <ul class="list-inline mb-0 fs-xs">
+                    <li class="list-inline-item pe-1"><i class="fi-star-filled mt-n1 me-1 fs-base text-warning align-middle"></i><b>{{data.rating}}</b><span class="text-muted">&nbsp;({{data.people_count}})</span></li>
+                    <li class="list-inline-item pe-1"><i class="fi-credit-card mt-n1 me-1 fs-base text-muted align-middle"></i>{{data.price}}</li>
+                    <li class="list-inline-item pe-1"><i class="fi-map-pin mt-n1 me-1 fs-base text-muted align-middle"></i>{{data.location}} km from center</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer-->
+  <app-footer></app-footer>

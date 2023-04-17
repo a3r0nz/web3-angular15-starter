@@ -1,0 +1,189 @@
+<main class="page-wrapper">
+  <!-- Header-->
+  <app-header id="top"></app-header>
+
+<!-- Page header-->
+<section class="mt-5 pt-4">
+  <!-- Parallax container-->
+  <div class="jarallax mt-2" data-jarallax data-speed="0.5">
+    <!-- Parallax image-->
+    <div class="jarallax-img bg-secondary" style="background-image: url(assets/img/city-guide/about/hero-bg.jpg); background-position: 36% center !important;background-attachment: fixed;"></div>
+    <!-- Section content-->
+    <div class="container py-3">
+      <!-- Breadcrumb-->
+      <app-breadcrumbs [breadcrumbItems]="breadCrumbItems"></app-breadcrumbs>
+      <!-- Text-->
+      <div class="col-md-6 col-sm-8 py-md-5 py-4 px-0">
+        <h1 class="display-4 mb-4 pb-md-2 text-light">Fall in <i class='fi-heart fs-1 text-primary'></i> with new places!</h1>
+        <p class="mb-sm-5 mb-4 pb-md-5 pb-3 lead text-light">We are your personal guide to unique experiences. We know the best places to see and events in any part of the world. Don't miss anything with our help!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <!-- Features-->
+ <section class="position-relative bg-white rounded-xxl-4 mb-5 pb-1 py-md-3 zindex-5" style="margin-top: -30px;">
+  <div class="container pt-5 mb-4 mb-md-5">
+    <h2 class="text-center">The values we live by</h2>
+    <p class="mb-4 pb-2 mx-auto fs-lg text-center" style="max-width: 616px;">Travelers across the globe use our platform to discover where to stay, what to do and where to eat in any part of the world.</p>
+    <!-- Features grid-->
+    <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1 g-4 justify-content-center">
+      <!-- Feature item-->
+      <div class="col" *ngFor="let data of serviceData">
+        <div class="card border-0 shadow-sm card-hover h-100">
+          <div class="card-body icon-box">
+            <div class="icon-box-media bg-faded-{{data.bg_color}} text-{{data.bg_color}} rounded-circle mb-3"><i class="{{data.icon}}"></i></div>
+            <h3 class="h5 card-title">{{data.title}}</h3>
+            <p class="card-text fs-sm">{{data.content}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <!-- Add business-->
+ <section class="container mb-5 pb-2 pb-lg-5">
+  <div class="row align-items-lg-center gy-4">
+    <div class="col-md-6"><img class="rounded-3" src="assets/img/city-guide/about/01.jpg" alt="Cover"></div>
+    <div class="col-lg-5 offset-lg-1 col-md-6">
+      <h2 class="mb-lg-4">Get new customers with our catalog easily!</h2>
+      <p class="mb-lg-4 fs-lg text-muted">Et quis dictum malesuada phasellus feugiat laoreet lacus. Imperdiet sed a dignissim mauris amet bibendum. Non odio molestie feugiat sed ullamcorper nunc.</p>
+      <ul class="list-unstyled mb-4 pb-lg-3">
+        <li class="d-flex"><i class="fi-check mt-1 me-2 pe-1 text-primary"></i>Nec placerat massa vitae arcu, sodales tortor.</li>
+        <li class="d-flex"><i class="fi-check mt-1 me-2 pe-1 text-primary"></i>Risus consectetur nulla vitae at donec est felis eget turpis.</li>
+        <li class="d-flex"><i class="fi-check mt-1 me-2 pe-1 text-primary"></i>Elit, sed vel turpis donec molestie elit, morbi aliquam.</li>
+        <li class="d-flex"><i class="fi-check mt-1 me-2 pe-1 text-primary"></i>Orci tincidunt consectetun quam massa at.</li>
+        <li class="d-flex"><i class="fi-check mt-1 me-2 pe-1 text-primary"></i>Ac aenean proin amet bibendum dolor placerat.</li>
+        <li class="d-flex"><i class="fi-check mt-1 me-2 pe-1 text-primary"></i>Leo quis nisi lorem morbi egestas sed lacus.</li>
+      </ul><a class="btn btn-lg btn-primary rounded-pill" routerLink="/vendor/add-business"><i class="fi-plus me-2"></i>Add Business</a>
+    </div>
+  </div>
+</section>
+
+ <!-- FAQ-->
+ <section class="container mb-5 pb-lg-5">
+  <h2 class="mb-sm-4 pb-md-2 text-center">Frequently asked questions</h2>
+  <!-- FAQ grid-->
+  <div class="row row-cols-lg-3 row-cols-sm-2 row-cols-1 g-sm-4 g-0">
+    <!-- Grid item-->
+    <div class="col">
+      <div class="card border-0 h-100">
+        <div class="card-body">
+          <h3 class="h5 text-primary">01. Getting started</h3><a class="nav-link mb-2 p-0 fw-normal" routerLink="/pages/help-center">Quis arcu euismod est, varius nisi?</a><a class="nav-link mb-2 p-0 fw-normal" routerLink="/pages/help-center">Aliquam, commodo sed nibh?</a><a class="nav-link mb-2 p-0 fw-normal" routerLink="/pages/help-center">Faucibus felis fames mauris dolor purus?</a><a class="nav-link mb-2 p-0 fw-normal" routerLink="/pages/help-center">Odio diam, tellus facilisi?</a><a class="nav-link mb-2 p-0 fw-normal" routerLink="/pages/help-center">Eu quisque libero, sed neque?</a><a class="nav-link mb-2 p-0 fw-normal" routerLink="/pages/help-center">Lectus sed sit cursus amet, vitae tempor?</a>
+        </div>
+      </div>
+    </div>
+    <!-- Grid item-->
+    <div class="col">
+      <div class="card border-0 h-100">
+        <div class="card-body">
+          <h3 class="h5 text-primary">02.Partnership</h3><a class="nav-link mb-2 p-0 fw-normal" routerLink="/pages/help-center">Tincidunt molestie scelerisque?</a><a class="nav-link mb-2 p-0 fw-normal" routerLink="/pages/help-center">Nunc, ipsum ut augue fusce ornare?</a><a class="nav-link mb-2 p-0 fw-normal" routerLink="/pages/help-center">Velit, mauris amet feugiat condimentum mollis?</a><a class="nav-link mb-2 p-0 fw-normal" routerLink="/pages/help-center">Lacus, sed fames mi cras id?</a><a class="nav-link mb-2 p-0 fw-normal" routerLink="/pages/help-center">Adipiscing magna suspendisse?</a><a class="nav-link mb-2 p-0 fw-normal" routerLink="/pages/help-center">Libero pellentesque ultricies maecenas?</a>
+        </div>
+      </div>
+    </div>
+    <!-- Grid item-->
+    <div class="col">
+      <div class="card border-0 h-100">
+        <div class="card-body">
+          <h3 class="h5 text-primary">03. Account &amp; profile</h3><a class="nav-link mb-2 p-0 fw-normal" routerLink="/pages/help-center">Cursus fusce volutpat tempor?</a><a class="nav-link mb-2 p-0 fw-normal" routerLink="/pages/help-center">A senectus auctor sodales gravida non elit?</a><a class="nav-link mb-2 p-0 fw-normal" routerLink="/pages/help-center">Mauris accumsan vel rhoncus?</a><a class="nav-link mb-2 p-0 fw-normal" routerLink="/pages/help-center">Cras nunc, semper lectus turpis?</a><a class="nav-link mb-2 p-0 fw-normal" routerLink="/pages/help-center">Pulvinar sed morbi massa nulla dolor eget?</a><a class="nav-link mb-2 p-0 fw-normal" routerLink="/pages/help-center">Bibendum mattis amet amet?</a>
+        </div>
+      </div>
+    </div>
+    <!-- Grid item-->
+    <div class="col">
+      <div class="card border-0 h-100">
+        <div class="card-body">
+          <h3 class="h5 text-primary">04. Privacy &amp; security</h3><a class="nav-link mb-2 p-0 fw-normal" routerLink="/pages/help-center">Pellentesque ante quisque sit?</a><a class="nav-link mb-2 p-0 fw-normal" routerLink="/pages/help-center">Eu quam bibendum adipiscing leo?</a><a class="nav-link mb-2 p-0 fw-normal" routerLink="/pages/help-center">Massa fermentum, eget nec elementum?</a><a class="nav-link mb-2 p-0 fw-normal" routerLink="/pages/help-center">In quis pulvinar amet morbi praesent?</a><a class="nav-link mb-2 p-0 fw-normal" routerLink="/pages/help-center">Eros, dolor in consequat netus?</a><a class="nav-link mb-2 p-0 fw-normal" routerLink="/pages/help-center">Quis gravida felis dui non gravida?</a>
+        </div>
+      </div>
+    </div>
+    <!-- Grid item-->
+    <div class="col">
+      <div class="card border-0 h-100">
+        <div class="card-body">
+          <h3 class="h5 text-primary">05. Transactions</h3><a class="nav-link mb-2 p-0 fw-normal" routerLink="/pages/help-center">Nisl urna id aliquam sed vitae pellentesque?</a><a class="nav-link mb-2 p-0 fw-normal" routerLink="/pages/help-center">Nam morbi faucibus ultricies euismod?</a><a class="nav-link mb-2 p-0 fw-normal" routerLink="/pages/help-center">Amet scelerisque consectetur consequa?</a><a class="nav-link mb-2 p-0 fw-normal" routerLink="/pages/help-center">Sapien at fames urna in id at?</a><a class="nav-link mb-2 p-0 fw-normal" routerLink="/pages/help-center">Fames id nullam et id proin ante ultrices?</a><a class="nav-link mb-2 p-0 fw-normal" routerLink="/pages/help-center">Quis ultricies turpis commodo, elit lectus?</a>
+        </div>
+      </div>
+    </div>
+    <!-- Grid item-->
+    <div class="col">
+      <div class="card border-0 h-100">
+        <div class="card-body">
+          <h3 class="h5 text-primary">06. Privacy &amp; security</h3><a class="nav-link mb-2 p-0 fw-normal" routerLink="/pages/help-center">Lacus eget amet blandit egestas?</a><a class="nav-link mb-2 p-0 fw-normal" routerLink="/pages/help-center">Augue at donec molestie vulputate cum?</a><a class="nav-link mb-2 p-0 fw-normal" routerLink="/pages/help-center">Viverra adipiscing nisl, lacus at et?</a><a class="nav-link mb-2 p-0 fw-normal" routerLink="/pages/help-center">Sagittis dictum hendrerit faucibus malesuada?</a><a class="nav-link mb-2 p-0 fw-normal" routerLink="/pages/help-center">Tempus est non sapien tempus?</a><a class="nav-link mb-2 p-0 fw-normal" routerLink="/pages/help-center">Nunc est hendrerit volutpat nunc donec?</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <!-- The people behind Finder-->
+ <section class="container mb-5 pb-2 pb-lg-5">
+  <h2 class="mb-4 text-center">The people behind Finder</h2>
+  <!-- Team carousel-->
+  <swiper [config]="people">
+    <div class="swiper-wrapper">
+    <div class="swiper-slide"  *ngFor="let data of peopleData">
+      <!-- Team slide-->
+      <div class="col">
+        <div class="card border-0 shadow-sm"><img class="card-img-top" src="{{data.image}}" alt="Devon Lane">
+          <div class="card-body text-center">
+            <h3 class="h5 card-title mb-2">{{data.name}}</h3><span class="d-inline-block mb-3 fs-sm">{{data.position}}</span>
+            <div class="pt-1"><a class="btn btn-icon btn-light-primary btn-xs rounded-circle shadow-sm mx-2" href="javascript:void(0);"><i class="fi-facebook"></i></a><a class="btn btn-icon btn-light-primary btn-xs rounded-circle shadow-sm mx-2" href="javascript:void(0);"><i class="fi-twitter"></i></a><a class="btn btn-icon btn-light-primary btn-xs rounded-circle shadow-sm mx-2" href="javascript:void(0);"><i class="fi-instagram"></i></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </swiper>
+</section>
+
+ <!-- The people behind Finder-->
+ <section class="container mb-5 pb-2 pb-lg-5">
+  <h2 class="mb-4 pb-2 text-center">World city guides</h2><img src="assets/img/city-guide/about/map.jpg" alt="World map">
+</section>
+
+ <!-- Blog: Latest posts-->
+ <section class="container my-5 py-lg-4">
+  <div class="d-sm-flex align-items-center justify-content-between mb-4 pb-2">
+    <h2 class="h3 mb-sm-0">Don’t miss the latest posts</h2><a class="btn btn-link fw-normal ms-sm-3 p-0" routerLink="/pages/blog-grid">Go to blog<i class="fi-arrow-long-right ms-2"></i></a>
+  </div>
+  <!-- Carousel-->
+  <swiper [config]="blog">
+    <div class="swiper-wrapper">
+    <div class="swiper-slide"  *ngFor="let data of blogData">
+      <!-- Item-->
+      <article><a class="d-block mb-3" routerLink="/pages/single-blog"><img class="rounded-3" src="{{data.image}}" alt="Post image"></a><a class="fs-xs text-uppercase text-decoration-none" href="javascript:void(0);">{{data.sub_title}}</a>
+        <h3 class="fs-base pt-1"><a class="nav-link" routerLink="/pages/single-blog">{{data.title}}</a></h3><a class="d-flex align-items-center text-decoration-none" href="javascript:void(0);">
+          <img class="rounded-circle" src="{{data.profile}}" width="44" alt="Avatar">
+          <div class="ps-2">
+            <h6 class="fs-sm text-nav lh-base mb-1">{{data.name}}</h6>
+            <div class="d-flex text-body fs-xs"><span class="me-2 pe-1"><i class="fi-calendar-alt opacity-70 mt-n1 me-1 align-middle"></i>{{data.date}}</span><span><i class="fi-chat-circle opacity-70 mt-n1 me-1 align-middle"></i>{{data.comments}} comments</span></div>
+          </div></a>
+      </article>
+    </div>
+    </div>
+  </swiper>
+</section>
+
+ <!-- Stay informed (subscribe form)-->
+ <section class="container mb-5 pb-lg-5">
+  <div class="rounded-3 bg-faded-accent py-5 px-sm-5 px-4">
+    <div class="mx-auto py-md-4 text-center" style="max-width: 605px;">
+      <h2>Stay informed</h2>
+      <p class="mb-4 pb-2 fs-lg">Subscribe to our newsletter, be the first to see the latest news &amp; advice.</p>
+      <form class="form-group rounded-pill mb-3">
+        <div class="input-group input-group-lg"><span class="input-group-text text-muted"><i class="fi-mail"></i></span>
+          <input class="form-control" type="email" placeholder="Your Email">
+        </div>
+        <button class="btn btn-primary btn-lg rounded-pill" type="button">Search</button>
+      </form>
+      <div class="form-text">* By signing up you agree to our <a href='javascript:void(0);' class='text-decoration-none'>Privacy Policy</a></div>
+    </div>
+  </div>
+</section>
+
+  </main>
+  <!-- Footer-->
+<app-footer></app-footer>
+
