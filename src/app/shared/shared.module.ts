@@ -12,13 +12,15 @@ import { FooterComponent } from './footer/footer.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { ConnectWalletButtonComponent } from './components/connect-wallet-button/connect-wallet-button.component';
 import {CorePipesModule} from "../core/pipes/pipes.module";
+import { ConnectedNetworkComponent } from './components/connected-network/connected-network.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     FooterComponent,
     BreadcrumbsComponent,
-    ConnectWalletButtonComponent
+    ConnectWalletButtonComponent,
+    ConnectedNetworkComponent
   ],
   imports: [
     CommonModule,

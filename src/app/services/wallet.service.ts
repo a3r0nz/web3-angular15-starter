@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {BehaviorSubject, Observable, Subject} from "rxjs";
 import {ethers} from "ethers";
 import { Logger } from './logger.service';
+import {SUPPORT_CHAINS} from '../utils/config.js';
 const log = new Logger('WalletService');
 
 @Injectable({
@@ -24,7 +25,7 @@ export class WalletService {
     log.debug('Init provider')
     this.provider = await new ethers.providers.Web3Provider(window.ethereum, "any")
     this.provider.on('network', (newNetwork:any, oldNetwork:any) => {
-      log.debug('network changed')
+      log.debug('network changed to '+newNetwork.chainId)
       if (oldNetwork) {
         log.debug('Chain changed from ' + oldNetwork.chainId + ' to ' + newNetwork.chainId);
         this.chainSubject.next(newNetwork)
@@ -34,6 +35,7 @@ export class WalletService {
   }
 
   async connectWallet(){
+    log.debug('Set local storage to connected state')
     await localStorage.setItem("connectStatus",'1')
     const _account = await this.getAccount()
     this.provider = await new ethers.providers.Web3Provider(window.ethereum, "any")
@@ -86,36 +88,72 @@ export class WalletService {
     //await this.getCurrentChain()
   }
 
-  async getSupportChains(){
-    return [
-      {
-        networkAbbr:"bkc",
-        chainIdNumber: 96,
-        chainId: '0x' + (96).toString(16),
-        chainName: "Bitkub Chain Mainnet",
-        rpcUrls: ["https://rpc.bitkubchain.io/"],
-        nativeCurrency: {
-          name: "KUB COIN",
-          symbol: "KUB",
-          decimals: 18,
-        },
-        wssUrls:["wss://wss.bitkubchain.io"],
-        blockExplorerUrls: ["https://bkcscan.com/"],
-      },
-      {
-        networkAbbr:"bkctestnet",
-        chainIdNumber: 25925,
-        chainId: '0x' + (25925).toString(16),
-        chainName: "Bitkub Chain Testnet",
-        rpcUrls: ["https://rpc-testnet.bitkubchain.io"],
-        nativeCurrency: {
-          name: "KUB COIN",
-          symbol: "tKUB",
-          decimals: 18,
-        },
-        wssUrls:["wss://wss-testnet.bitkubchain.io"],
-        blockExplorerUrls: ["https://testnet.bkcscan.com/"],
+  async getChainId(){
+    try{
+      this.provider = await new ethers.providers.Web3Provider(window.ethereum, "any")
+      let _chainId = await this.provider.getNetwork()
+      return _chainId.chainId
+    }catch (e){
+      log.error(e)
+      return 0
+    }
+  }
+
+  async getChainInfo(){
+    let id = await this.getChainId()
+    let chains = await this.getSupportChains()
+    let chain = chains.find((ch)=> {
+      return ch.chainIdNumber == id
+    })
+    return chain
+  }
+
+  async addNetwork(network){
+    try {
+      await window.ethereum.request({
+        method: 'wallet_addEthereumChain',
+        params: [{
+          chainId: network.chainId,
+          chainName: network.chainName,
+          rpcUrls: network.rpcUrls,
+          nativeCurrency: network.nativeCurrency,
+          blockExplorerUrls: network.blockExplorerUrls,
+        }],
+      });
+    } catch (addError) {
+      log.error("error on add chain: %o",addError);
+    }
+  }
+
+  async switchNetwork(network){
+    try {
+      // check if the chain to connect to is installed
+      await window.ethereum.request({
+        method: 'wallet_switchEthereumChain',
+        params: [{ chainId: network.chainId }], // chainId must be in hexadecimal numbers
+      });
+    } catch (error) {
+      const errorCode = error.data ? (error.data?.originalError ? error.data?.originalError?.code : 0 ) : 0
+      if (error.code === 4902 || errorCode == 4902 || error.code === -32603 || errorCode == -32603) {
+        try {
+          await window.ethereum.request({
+            method: 'wallet_addEthereumChain',
+            params: [{
+              chainId: network.chainId,
+              chainName: network.chainName,
+              rpcUrls: network.rpcUrls,
+              nativeCurrency: network.nativeCurrency,
+              blockExplorerUrls: network.blockExplorerUrls,
+            }],
+          });
+        } catch (addError) {
+          log.error("error on add chain: %o",addError);
+        }
       }
-    ]
+    }
+  }
+
+  async getSupportChains(){
+    return SUPPORT_CHAINS
   }
 }

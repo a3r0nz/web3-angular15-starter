@@ -1,20 +1,30 @@
 export const SUPPORT_CHAINS = [
   {
-    chainId:96,
-    chainName:'Bitkub Chain',
-    chainLogo:'',
-    rpcUrl:'https://rpc.bitkubchain.io',
-    explorerUrl:'https://bkcscan.com',
-    currencySymbol:'KUB',
-    default:true
+    networkAbbr:"bkc",
+    chainIdNumber: 96,
+    chainId: '0x' + (96).toString(16),
+    chainName: "Bitkub Chain Mainnet",
+    rpcUrls: ["https://rpc.bitkubchain.io/"],
+    nativeCurrency: {
+      name: "KUB COIN",
+      symbol: "KUB",
+      decimals: 18,
+    },
+    wssUrls:["wss://wss.bitkubchain.io"],
+    blockExplorerUrls: ["https://bkcscan.com/"],
   },
   {
-    chainId:25925,
-    chainName:'Bitkub Chain Testnet',
-    chainLogo:'',
-    rpcUrl:'https://rpc-testnet.bitkubchain.io',
-    explorerUrl:'https://testnet.bkcscan.com',
-    currencySymbol:'KUB',
-    default:false
+    networkAbbr:"bkctestnet",
+    chainIdNumber: 25925,
+    chainId: '0x' + (25925).toString(16),
+    chainName: "Bitkub Chain Testnet",
+    rpcUrls: ["https://rpc-testnet.bitkubchain.io"],
+    nativeCurrency: {
+      name: "KUB COIN",
+      symbol: "tKUB",
+      decimals: 18,
+    },
+    wssUrls:["wss://wss-testnet.bitkubchain.io"],
+    blockExplorerUrls: ["https://testnet.bkcscan.com/"],
   }
 ]
