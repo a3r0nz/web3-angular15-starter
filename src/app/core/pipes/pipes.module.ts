@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 
 import { HideAddressPipe } from './hide-address.pipe';
+import {FormatUnitPipe} from "./format-unit.pipe";
 
 @NgModule({
-  declarations: [HideAddressPipe],
+  declarations: [HideAddressPipe, FormatUnitPipe],
   imports: [],
-  exports: [HideAddressPipe]
+  exports: [HideAddressPipe,FormatUnitPipe]
 })
 export class CorePipesModule {}

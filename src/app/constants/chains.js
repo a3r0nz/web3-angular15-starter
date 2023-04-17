@@ -1,8 +1,13 @@
+export const CHAIN_IDS = {
+  BITKUB_CHAIN: 96,
+  BITKUB_CHAIN_TESTNET: 25925
+}
+
 export const SUPPORT_CHAINS = [
   {
+    chainIdNumber: CHAIN_IDS.BITKUB_CHAIN,
     networkAbbr:"bkc",
-    chainIdNumber: 96,
-    chainId: '0x' + (96).toString(16),
+    chainId: '0x' + (CHAIN_IDS.BITKUB_CHAIN).toString(16),
     chainName: "Bitkub Chain Mainnet",
     rpcUrls: ["https://rpc.bitkubchain.io/"],
     nativeCurrency: {
@@ -15,8 +20,8 @@ export const SUPPORT_CHAINS = [
   },
   {
     networkAbbr:"bkctestnet",
-    chainIdNumber: 25925,
-    chainId: '0x' + (25925).toString(16),
+    chainIdNumber: CHAIN_IDS.BITKUB_CHAIN_TESTNET,
+    chainId: '0x' + (CHAIN_IDS.BITKUB_CHAIN_TESTNET).toString(16),
     chainName: "Bitkub Chain Testnet",
     rpcUrls: ["https://rpc-testnet.bitkubchain.io"],
     nativeCurrency: {

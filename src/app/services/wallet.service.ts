@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {BehaviorSubject, Observable, Subject} from "rxjs";
 import {ethers} from "ethers";
 import { Logger } from './logger.service';
-import {SUPPORT_CHAINS} from '../utils/config.js';
+import {SUPPORT_CHAINS} from '../constants/chains.js';
 const log = new Logger('WalletService');
 
 @Injectable({
@@ -24,14 +24,34 @@ export class WalletService {
   async initProvider(){
     log.debug('Init provider')
     this.provider = await new ethers.providers.Web3Provider(window.ethereum, "any")
-    this.provider.on('network', (newNetwork:any, oldNetwork:any) => {
+    this.provider.on('network', async (newNetwork:any, oldNetwork:any) => {
       log.debug('network changed to '+newNetwork.chainId)
       if (oldNetwork) {
         log.debug('Chain changed from ' + oldNetwork.chainId + ' to ' + newNetwork.chainId);
         this.chainSubject.next(newNetwork)
+        await this.initPublicProvider()
       }
     });
-    // TODO : init public provider
+
+  }
+
+  async initPublicProvider(){
+    const currentChainInfo = await this.getChainInfo()
+    this.publicProvider = await new ethers.providers.JsonRpcProvider(currentChainInfo.rpcUrls[0])
+  }
+
+  async getProvider(){
+    if(!this.provider){
+      await this.initProvider()
+    }
+    return this.provider
+  }
+
+  async getPublicProvider(){
+    if(!this.publicProvider){
+      await this.initPublicProvider()
+    }
+    return this.publicProvider
   }
 
   async connectWallet(){
@@ -47,6 +67,10 @@ export class WalletService {
     await localStorage.setItem("connectStatus",'0')
     this.accountSubject.next(null)
     this.account = null
+  }
+
+  async getWalletConnectStatus(){
+    return localStorage.getItem("connectStatus")
   }
 
   async getAccount(debug = '-1'){

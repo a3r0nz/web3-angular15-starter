@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   { path: '', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule) },
   { path: 'pages', loadChildren: () => import('./pages/extrapages/extrapages.module').then(m => m.ExtrapagesModule)  },
+  { path: 'sample', loadChildren: () => import('./pages/sample/sample.module').then(m => m.SampleModule)  },
   {
     path: '**',
     redirectTo: '/pages/404' // Error 404 - Page not found

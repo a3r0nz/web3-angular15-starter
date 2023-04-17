@@ -13,6 +13,8 @@ import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { ConnectWalletButtonComponent } from './components/connect-wallet-button/connect-wallet-button.component';
 import {CorePipesModule} from "../core/pipes/pipes.module";
 import { ConnectedNetworkComponent } from './components/connected-network/connected-network.component';
+import { WalletConnectCheckerComponent } from './components/wallet-connect-checker/wallet-connect-checker.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { ConnectedNetworkComponent } from './components/connected-network/connec
     FooterComponent,
     BreadcrumbsComponent,
     ConnectWalletButtonComponent,
-    ConnectedNetworkComponent
+    ConnectedNetworkComponent,
+    WalletConnectCheckerComponent,
+    SpinnerComponent
   ],
   imports: [
     CommonModule,
@@ -31,6 +35,6 @@ import { ConnectedNetworkComponent } from './components/connected-network/connec
     ScrollToModule.forRoot(),
     CorePipesModule
   ],
-  exports: [HeaderComponent, FooterComponent, BreadcrumbsComponent]
+  exports: [HeaderComponent, FooterComponent, BreadcrumbsComponent, WalletConnectCheckerComponent, SpinnerComponent]
 })
 export class SharedModule { }
