@@ -1,0 +1,672 @@
+<main class="page-wrapper">
+  <!-- Header-->
+  <app-header id="top"></app-header>
+
+  <section class="container py-5 mt-5 mb-lg-3">
+    <h1>UI Components</h1>
+    <section class="showcase">
+      <div class="nes-container with-title">
+        <h3 class="title">Texts</h3>
+        <div id="texts" class="item">
+          <span class="nes-text is-primary me-4">Primary</span>
+          <span class="nes-text is-success me-4">Success</span>
+          <span class="nes-text is-warning me-4">Warning</span>
+          <span class="nes-text is-error me-4">Error</span>
+          <span class="nes-text is-disabled me-4">Disabled</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="showcase mt-3">
+      <section class="nes-container with-title">
+        <h3 class="title">Buttons</h3>
+        <div id="buttons" class="item">
+          <a class="nes-btn me-4" href="#">Normal</a>
+
+          <button type="button" class="nes-btn is-primary me-4">Primary</button>
+          <button type="button" class="nes-btn is-success me-4">Success</button>
+          <button type="button" class="nes-btn is-warning me-4">Warning</button>
+          <button type="button" class="nes-btn is-error me-4">Error</button>
+          <button type="button" class="nes-btn is-disabled me-4">
+            Disabled
+          </button>
+
+          <label class="nes-btn">
+            <span>Select your file</span>
+            <input type="file" />
+          </label>
+        </div>
+      </section>
+    </section>
+
+    <section class="showcase mt-3">
+      <section class="nes-container with-title">
+        <h3 class="title">Radios</h3>
+        <div id="radios" class="item">
+          <label>
+            <input type="radio" class="nes-radio" name="answer" checked="" />
+            <span>Yes</span>
+          </label>
+
+          <label>
+            <input type="radio" class="nes-radio" name="answer" />
+            <span>No</span>
+          </label>
+
+          <div style="background-color: #212529; padding: 0.5rem 0">
+            <label style="margin-bottom: 0px">
+              <input
+                type="radio"
+                class="nes-radio is-dark"
+                name="answer-dark"
+                checked="" />
+              <span>Yes</span>
+            </label>
+
+            <label style="margin-bottom: 0px">
+              <input
+                type="radio"
+                class="nes-radio is-dark"
+                name="answer-dark" />
+              <span>No</span>
+            </label>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="showcase mt-3">
+      <section class="nes-container with-title">
+        <h3 class="title">Checkboxes</h3>
+        <div id="checkboxes" class="item">
+          <label>
+            <input type="checkbox" class="nes-checkbox" checked="" />
+            <span>Enable</span>
+          </label>
+
+          <div style="background-color: #212529; padding: 0.5rem 0">
+            <label style="margin-bottom: 0px">
+              <input type="checkbox" class="nes-checkbox is-dark" checked="" />
+              <span>Dark</span>
+            </label>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="showcase mt-3">
+      <section class="nes-container with-title">
+        <h3 class="title">Inputs</h3>
+        <div id="inputs" class="item">
+          <div class="nes-field">
+            <label for="name_field">Your name</label>
+            <input type="text" id="name_field" class="nes-input" />
+          </div>
+
+          <div class="nes-field is-inline mt-4">
+            <label for="inline_field">.input.is-success</label>
+            <input
+              type="text"
+              id="inline_field"
+              class="nes-input is-success"
+              placeholder="NES.css" />
+          </div>
+
+          <div class="nes-field is-inline mt-4">
+            <label for="warning_field">.input.is-warning</label>
+            <input
+              type="text"
+              id="warning_field"
+              class="nes-input is-warning"
+              placeholder="8bit.css" />
+          </div>
+
+          <div class="nes-field is-inline mt-4">
+            <label for="error_field">.input.is-error</label>
+            <input
+              type="text"
+              id="error_field"
+              class="nes-input is-error"
+              placeholder="awesome.css" />
+          </div>
+
+          <div
+            style="background-color: #212529; padding: 1rem"
+            class="nes-field is-inline mt-4">
+            <label for="dark_field" style="color: #fff">.input.is-dark</label>
+            <input
+              type="text"
+              id="dark_field"
+              class="nes-input is-dark"
+              placeholder="dark.css" />
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="showcase mt-3">
+      <section class="nes-container with-title">
+        <h3 class="title">Textarea</h3>
+        <div id="textarea" class="item">
+          <label for="textarea_field">Textarea</label>
+          <textarea id="textarea_field" class="nes-textarea"></textarea>
+        </div>
+      </section>
+    </section>
+    <section class="showcase mt-3">
+      <section class="nes-container with-title">
+        <h3 class="title">Selects</h3>
+        <div id="selects" class="item">
+          <label for="default_select">Default select</label>
+          <div class="nes-select">
+            <select required="" id="default_select">
+              <option value="" disabled="" selected="" hidden="">
+                Select...
+              </option>
+              <option value="0">To be</option>
+              <option value="1">Not to be</option>
+            </select>
+          </div>
+
+          <label for="success_select" class="mt-4">nes-select.is-success</label>
+          <div class="nes-select is-success">
+            <select required="" id="success_select">
+              <option value="" disabled="" selected="" hidden="">
+                Select...
+              </option>
+              <option value="0">To be</option>
+              <option value="1">Not to be</option>
+            </select>
+          </div>
+
+          <label for="warning_select" class="mt-4">nes-select.is-warning</label>
+          <div class="nes-select is-warning">
+            <select required="" id="warning_select">
+              <option value="" disabled="" selected="" hidden="">
+                Select...
+              </option>
+              <option value="0">To be</option>
+              <option value="1">Not to be</option>
+            </select>
+          </div>
+
+          <label for="error_select" class="mt-4">nes-select.is-error</label>
+          <div class="nes-select is-error">
+            <select required="" id="error_select">
+              <option value="" disabled="" selected="" hidden="">
+                Select...
+              </option>
+              <option value="0">To be</option>
+              <option value="1">Not to be</option>
+            </select>
+          </div>
+
+          <div
+            style="
+              background-color: #212529;
+              padding: 1rem 1.2rem 1rem 1rem;
+              width: calc(100% + 8px);
+            "
+            class="mt-4">
+            <label for="dark_select" style="color: #fff"
+              >nes-select.is-dark</label
+            >
+            <div class="nes-select is-dark">
+              <select required="" id="dark_select">
+                <option value="" disabled="" selected="" hidden="">
+                  Select...
+                </option>
+                <option value="0">To be</option>
+                <option value="1">Not to be</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section class="showcase mt-3">
+      <section class="nes-container with-title">
+        <h3 class="title">Containers</h3>
+        <div id="containers" class="item">
+          <div class="nes-container with-title is-centered">
+            <p class="title">Container.is-centered</p>
+            <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
+          </div>
+
+          <div class="nes-container is-dark with-title mt-4">
+            <p class="title">Container.is-dark</p>
+            <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
+          </div>
+
+          <div class="nes-container is-rounded mt-4">
+            <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
+          </div>
+
+          <div class="nes-container is-rounded is-dark mt-4">
+            <p>Good morning. Thou hast had a good night's sleep, I hope.</p>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section class="showcase mt-3">
+      <section class="nes-container with-title">
+        <h3 class="title">Dialogs</h3>
+        <div id="dialogs" class="item">
+          <!-- Dialog -->
+          <section>
+            <button
+              type="button"
+              class="nes-btn is-primary"
+              onclick="document.getElementById('dialog-default').showModal();">
+              Open dialog
+            </button>
+            <dialog class="nes-dialog" id="dialog-default">
+              <form method="dialog">
+                <p class="title">Dialog</p>
+                <p>Alert: this is a dialog.</p>
+                <menu class="dialog-menu">
+                  <button class="nes-btn">Cancel</button>
+                  <button class="nes-btn is-primary">Confirm</button>
+                </menu>
+              </form>
+            </dialog>
+          </section>
+
+          <!-- Dark dialog -->
+          <section class="mt-4">
+            <button
+              type="button"
+              class="nes-btn is-primary"
+              onclick="document.getElementById('dialog-dark').showModal();">
+              Open dark dialog
+            </button>
+            <dialog class="nes-dialog is-dark" id="dialog-dark">
+              <form method="dialog">
+                <p class="title">Dark dialog</p>
+                <p>Alert: this is a dialog.</p>
+                <menu class="dialog-menu">
+                  <button class="nes-btn">Cancel</button>
+                  <button class="nes-btn is-primary">Confirm</button>
+                </menu>
+              </form>
+            </dialog>
+          </section>
+
+          <!-- Rounded dialog -->
+          <section class="mt-4">
+            <button
+              type="button"
+              class="nes-btn is-primary"
+              onclick="document.getElementById('dialog-rounded').showModal();">
+              Open rounded dialog
+            </button>
+            <dialog class="nes-dialog is-rounded" id="dialog-rounded">
+              <form method="dialog">
+                <p class="title">Rounded dialog</p>
+                <p>Alert: this is a dialog.</p>
+                <menu class="dialog-menu">
+                  <button class="nes-btn">Cancel</button>
+                  <button class="nes-btn is-primary">Confirm</button>
+                </menu>
+              </form>
+            </dialog>
+          </section>
+
+          <!-- Dark and Rounded dialog -->
+          <section class="mt-4">
+            <button
+              type="button"
+              class="nes-btn is-primary"
+              onclick="document.getElementById('dialog-dark-rounded').showModal();">
+              Open dark and rounded dialog
+            </button>
+            <dialog
+              class="nes-dialog is-dark is-rounded"
+              id="dialog-dark-rounded">
+              <form method="dialog">
+                <p class="title">Dark and Rounded dialog</p>
+                <p>Alert: this is a dialog.</p>
+                <menu class="dialog-menu">
+                  <button class="nes-btn">Cancel</button>
+                  <button class="nes-btn is-primary">Confirm</button>
+                </menu>
+              </form>
+            </dialog>
+          </section>
+        </div>
+        <!---->
+        <p class="note nes-text is-error mt-4">
+          NES.css does not include any JavaScript. If you want to use dialog
+          element other than Chrome, you need polyfill.
+        </p>
+      </section>
+    </section>
+    <section class="showcase mt-3">
+      <section class="nes-container with-title">
+        <h3 class="title">Lists</h3>
+        <div id="lists" class="item">
+          <div class="lists">
+            <ul class="nes-list is-disc">
+              <li>Good morning.</li>
+              <li>Thou hast had a good night's sleep, I hope.</li>
+              <li>Thou hast had a good afternoon</li>
+              <li>Good night.</li>
+            </ul>
+          </div>
+
+          <div class="lists">
+            <ul class="nes-list is-circle">
+              <li>Good morning.</li>
+              <li>Thou hast had a good night's sleep, I hope.</li>
+              <li>Thou hast had a good afternoon</li>
+              <li>Good night.</li>
+            </ul>
+          </div>
+
+          <section class="nes-container is-dark">
+            <div class="lists">
+              <ul class="nes-list is-disc is-dark">
+                <li>Good morning.</li>
+                <li>Thou hast had a good night's sleep, I hope.</li>
+                <li>Thou hast had a good afternoon</li>
+                <li>Good night.</li>
+              </ul>
+            </div>
+
+            <div class="lists">
+              <ul class="nes-list is-circle is-dark">
+                <li>Good morning.</li>
+                <li>Thou hast had a good night's sleep, I hope.</li>
+                <li>Thou hast had a good afternoon</li>
+                <li>Good night.</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      </section>
+    </section>
+    <section class="showcase mt-3">
+      <section class="nes-container with-title">
+        <h3 class="title">Tables</h3>
+        <div id="tables" class="item">
+          <div class="nes-table-responsive">
+            <table class="nes-table is-bordered is-centered">
+              <thead>
+                <tr>
+                  <th>Table.is-bordered</th>
+                  <th>Table.is-centered</th>
+                  <th>Table.is-centered</th>
+                  <th>Table.is-centered</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Thou hast had a good morning</td>
+                  <td>Thou hast had a good afternoon</td>
+                  <td>Thou hast had a good evening</td>
+                  <td>Thou hast had a good night</td>
+                </tr>
+                <tr>
+                  <td>Thou hast had a good morning</td>
+                  <td>Thou hast had a good afternoon</td>
+                  <td>Thou hast had a good evening</td>
+                  <td>Thou hast had a good night</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="nes-table-responsive mt-4">
+            <table class="nes-table is-bordered is-dark">
+              <thead>
+                <tr>
+                  <th>Table.is-dark</th>
+                  <th>Table.is-bordered</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Thou hast had a good morning</td>
+                  <td>Thou hast had a good afternon</td>
+                </tr>
+                <tr>
+                  <td>Thou hast had a good morning</td>
+                  <td>Thou hast had a good afternoon</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section class="showcase mt-3">
+      <section class="nes-container with-title">
+        <h3 class="title">Progress</h3>
+        <div id="progress" class="item">
+          <progress class="nes-progress" value="90" max="100"></progress>
+          <progress
+            class="nes-progress is-primary"
+            value="80"
+            max="100"></progress>
+          <progress
+            class="nes-progress is-success"
+            value="50"
+            max="100"></progress>
+          <progress
+            class="nes-progress is-warning"
+            value="30"
+            max="100"></progress>
+          <progress
+            class="nes-progress is-error"
+            value="10"
+            max="100"></progress>
+          <progress
+            class="nes-progress is-pattern"
+            value="50"
+            max="100"></progress>
+        </div>
+      </section>
+    </section>
+    <section class="showcase mt-3">
+      <section class="nes-container with-title">
+        <h3 class="title">Avatars</h3>
+        <div id="avatars" class="item">
+          <img
+            class="nes-avatar is-pixelated me-3"
+            alt="Gravatar image example"
+            src="https://www.gravatar.com/avatar?s=15" />
+
+          <img
+            class="nes-avatar is-small is-pixelated me-3"
+            alt="Gravatar image example"
+            src="https://www.gravatar.com/avatar?s=15" />
+          <img
+            class="nes-avatar is-medium is-pixelated me-3"
+            alt="Gravatar image example"
+            src="https://www.gravatar.com/avatar?s=15" />
+          <img
+            class="nes-avatar is-large is-pixelated me-3"
+            alt="Gravatar image example"
+            src="https://www.gravatar.com/avatar?s=15" />
+
+          <img
+            class="nes-avatar is-rounded is-pixelated me-3"
+            alt="Gravatar image example"
+            src="https://www.gravatar.com/avatar?s=15" />
+
+          <img
+            class="nes-avatar is-rounded is-small is-pixelated me-3"
+            alt="Gravatar image example"
+            src="https://www.gravatar.com/avatar?s=15" />
+          <img
+            class="nes-avatar is-rounded is-medium is-pixelated me-3"
+            alt="Gravatar image example"
+            src="https://www.gravatar.com/avatar?s=15" />
+          <img
+            class="nes-avatar is-rounded is-large is-pixelated me-3"
+            alt="Gravatar image example"
+            src="https://www.gravatar.com/avatar?s=15" />
+        </div>
+        <p class="description nes-text mt-4">
+          It is recommended to use the class "is-pixelated".
+        </p>
+      </section>
+    </section>
+    <section class="showcase mt-3">
+      <section class="nes-container with-title">
+        <h3 class="title">Cursor</h3>
+        <div id="cursor" class="item">
+          <p class="nes-balloon from-left nes-pointer">
+            This is not a clickable element, but it's an area of the pointer.
+          </p>
+        </div>
+      </section>
+    </section>
+
+    <section class="showcase mt-3">
+      <section class="nes-container with-title">
+        <h3 class="title">Badges</h3>
+        <div id="badges" class="item">
+          <a href="#" class="nes-badge me-5 mt-5">
+            <span class="is-dark">NES.css</span>
+          </a>
+
+          <a href="#" class="nes-badge me-5 mt-5">
+            <span class="is-primary">is</span>
+          </a>
+
+          <a href="#" class="nes-badge me-5 mt-5">
+            <span class="is-success">a</span>
+          </a>
+
+          <a href="#" class="nes-badge me-5 mt-5">
+            <span class="is-warning">great</span>
+          </a>
+
+          <a href="#" class="nes-badge me-5 mt-5">
+            <span class="is-error">framework!</span>
+          </a>
+
+          <a href="#" class="nes-badge is-split me-5 mt-5">
+            <span class="is-dark">npm</span>
+            <span class="is-primary">1.1.0</span>
+          </a>
+
+          <a href="#" class="nes-badge is-split me-5 mt-5">
+            <span class="is-dark">test</span>
+            <span class="is-success">100%</span>
+          </a>
+
+          <a href="#" class="nes-badge is-icon me-5 mt-5">
+            <span class="is-warning"
+              ><i class="nes-icon star is-small"></i
+            ></span>
+            <span class="is-primary">Icons</span>
+          </a>
+
+          <a href="#" class="nes-badge is-icon me-5 mt-5">
+            <span class="is-dark">hi</span>
+            <span class="is-warning">Text</span>
+          </a>
+        </div>
+      </section>
+    </section>
+    <section class="showcase mt-3">
+      <section class="nes-container with-title">
+        <h3 class="title">Other-icons</h3>
+        <div id="other-icons" class="item">
+          <section class="icon-list">
+            <!-- close -->
+            <i class="nes-icon close is-large pe-4"></i>
+
+            <!-- trophy -->
+            <i class="nes-icon trophy is-large pe-4"></i>
+
+            <!-- coin -->
+            <i class="nes-icon coin is-large pe-4"></i>
+          </section>
+        </div>
+        <p class="description nes-text">
+          If you want to change icon size, please use "is-small", "is-medium"
+          and "is-large".
+        </p>
+      </section>
+    </section>
+    <section class="showcase mt-3">
+      <section class="nes-container with-title">
+        <h3 class="title">Reaction-icons</h3>
+        <div id="reaction-icons" class="item">
+          <section class="icon-list">
+            <!-- heart -->
+            <i class="nes-icon is-large heart pe-4"></i>
+            <i class="nes-icon is-large is-half heart pe-4"></i>
+            <i class="nes-icon is-large is-transparent heart pe-4"></i>
+            <i class="nes-icon is-large heart is-empty pe-4"></i>
+
+            <!-- star -->
+            <i class="nes-icon is-large star pe-4"></i>
+            <i class="nes-icon is-large star is-half pe-4"></i>
+            <i class="nes-icon is-large star is-transparent pe-4"></i>
+            <i class="nes-icon is-large star is-empty pe-4"></i>
+
+            <!-- like -->
+            <i class="nes-icon is-large like pe-4"></i>
+            <i class="nes-icon is-large like is-empty pe-4"></i>
+          </section>
+        </div>
+        <p class="description nes-text">
+          If you want to change icon size, please use "is-small", "is-medium"
+          and "is-large".
+        </p>
+      </section>
+    </section>
+    <section class="showcase mt-3">
+      <section class="nes-container with-title">
+        <h3 class="title">Sns-icons</h3>
+        <div id="sns-icons" class="item">
+          <section class="icon-list">
+            <!-- twitter -->
+            <i class="nes-icon twitter is-large pe-4"></i>
+
+            <!-- facebook -->
+            <i class="nes-icon facebook is-large pe-4"></i>
+
+            <!-- instagram -->
+            <i class="nes-icon instagram is-large pe-4"></i>
+
+            <!-- github -->
+            <i class="nes-icon github is-large pe-4"></i>
+
+            <!-- google -->
+            <i class="nes-icon google is-large pe-4"></i>
+
+            <!-- gmail -->
+            <i class="nes-icon gmail is-large pe-4"></i>
+
+            <!-- medium -->
+            <i class="nes-icon medium is-large pe-4"></i>
+
+            <!-- linkedin -->
+            <i class="nes-icon linkedin is-large pe-4"></i>
+
+            <!-- twitch -->
+            <i class="nes-icon twitch is-large pe-4"></i>
+
+            <!-- youtube -->
+            <i class="nes-icon youtube is-large pe-4"></i>
+
+            <!-- reddit -->
+            <i class="nes-icon reddit is-large pe-4"></i>
+
+            <!-- whatsapp -->
+            <i class="nes-icon whatsapp is-large pe-4"></i>
+          </section>
+        </div>
+        <p class="description nes-text">
+          If you wanto to change icon size, please use "is-small", "is-medium"
+          and "is-large".
+        </p>
+      </section>
+    </section>
+  </section>
+</main>

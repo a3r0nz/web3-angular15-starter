@@ -2,3 +2,20 @@
 // override.scss
 // Use this to write your custom SCSS
 //
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+@font-face {
+  font-family: "Visitor";
+  src: url("../fonts/visitor1.ttf");
+}
+
+body{
+  //font-family: 'Visitor', cursive;
+  font-family: 'Press Start 2P', cursive;
+
+}
+
+.nes-btn, .nes-input, .nes-textarea, .nes-select select, .nes-progress, .nes-balloon{
+  border-image-repeat: stretch !important;
+}

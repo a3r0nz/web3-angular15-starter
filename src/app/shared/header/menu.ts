@@ -13,19 +13,24 @@ export const MENU: MenuItem[] = [
   },
   {
     id: 3,
+    label: 'UI Components',
+    link: '/sample/components',
+  },
+  {
+    id: 4,
     label: 'Other',
     subItems: [
       {
-        id: 4,
+        id: 5,
         label: 'About',
         link: '/pages/about',
-        parentId: 3,
+        parentId: 4,
       },
       {
-        id: 5,
+        id: 6,
         label: 'Contact',
         link: '/pages/contacts',
-        parentId: 3,
+        parentId: 4,
       },
     ],
   },
