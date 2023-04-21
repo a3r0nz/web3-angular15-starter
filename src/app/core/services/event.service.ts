@@ -14,6 +14,8 @@ type EventCallback = (payload: any) => void;
 })
 export class EventService {
   private handler = new Subject<Event>();
+
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   constructor() {}
 
   /**

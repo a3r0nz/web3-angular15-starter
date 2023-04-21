@@ -20,7 +20,7 @@ export class WalletConnectCheckerComponent implements OnInit {
       this.connected = true;
     } else {
       this._walletService.getAccountSubject().subscribe(async (account) => {
-        log.debug('Wallet connected');
+        log.debug('Wallet connected : ' + account);
         if (!this.connected) {
           this.isLoading = true;
           window.location.reload();

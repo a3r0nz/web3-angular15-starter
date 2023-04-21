@@ -2,16 +2,14 @@
 <header
   class="navbar navbar-expand-lg navbar-light bg-light fixed-top"
   data-scroll-header
-  (window:scroll)="windowScroll()"
->
+  (window:scroll)="windowScroll()">
   <div class="container">
     <a class="navbar-brand me-3 me-xl-4" routerLink="">
       <img
         class="d-block"
         src="assets/img/logo/logo-dark.svg"
         width="116"
-        alt="Finder"
-      />
+        alt="StarterKit" />
     </a>
     <button
       class="navbar-toggler ms-auto"
@@ -21,14 +19,12 @@
       aria-controls="navbarNav"
       aria-expanded="false"
       aria-label="Toggle navigation"
-      (click)="toggleMobileMenu()"
-    >
+      (click)="toggleMobileMenu()">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <app-connected-network
-      class="order-lg-3 d-none d-sm-inline-block"
-    ></app-connected-network>
+      class="order-lg-3 d-none d-sm-inline-block"></app-connected-network>
     <app-connect-wallet-button class="order-lg-4"></app-connect-wallet-button>
     <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
       <ul class="navbar-nav navbar-nav-scroll" style="max-height: 35rem">
@@ -41,8 +37,7 @@
               href="javascript: void(0);"
               id="topnav-components"
               routerLink="{{ item.link }}"
-              role="button"
-            >
+              role="button">
               {{ item.label }}
             </a>
 
@@ -52,22 +47,19 @@
               (click)="onMenuClick($event)"
               href="javascript:void(0);"
               id="topnav-components"
-              role="button"
-            >
+              role="button">
               {{ item.label }}
             </a>
 
             <ul
               class="dropdown-menu"
               aria-labelledby="topnav-dashboard"
-              *ngIf="hasItems(item)"
-            >
+              *ngIf="hasItems(item)">
               <ng-template
                 ngFor
                 let-i="index"
                 let-subitem
-                [ngForOf]="item.subItems"
-              >
+                [ngForOf]="item.subItems">
                 <a
                   class="col dropdown-item side-nav-link-ref"
                   *ngIf="!hasItems(subitem)"
@@ -88,8 +80,7 @@
                     <ng-template
                       ngFor
                       let-subSubitem
-                      [ngForOf]="subitem.subItems"
-                    >
+                      [ngForOf]="subitem.subItems">
                       <a
                         class="dropdown-item"
                         *ngIf="!hasItems(subSubitem)"

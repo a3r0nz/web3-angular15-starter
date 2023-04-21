@@ -14,11 +14,13 @@ import { serviceData, peopleData, blogData } from './data';
  */
 export class AboutComponent implements OnInit {
   // bread crumb items
+  // eslint-disable-next-line @typescript-eslint/ban-types
   breadCrumbItems!: Array<{}>;
   serviceData!: service[];
   blogData!: blog[];
   peopleData!: people[];
 
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   constructor() {}
 
   ngOnInit(): void {

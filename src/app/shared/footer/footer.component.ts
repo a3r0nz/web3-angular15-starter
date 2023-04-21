@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -9,10 +9,13 @@ import { Component, OnInit } from '@angular/core';
 /**
  * Footer Component
  */
-export class FooterComponent implements OnInit {
+export class FooterComponent  {
+
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   constructor() {}
 
-  ngOnInit(): void {}
+
+
 
   /**
    * SidebarHide modal

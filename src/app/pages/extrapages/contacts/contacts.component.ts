@@ -16,6 +16,7 @@ import {
  */
 export class ContactsComponent implements OnInit {
   // bread crumb items
+  // eslint-disable-next-line @typescript-eslint/ban-types
   breadCrumbItems!: Array<{}>;
   longitude = 20.728218;
   latitude = 52.128973;

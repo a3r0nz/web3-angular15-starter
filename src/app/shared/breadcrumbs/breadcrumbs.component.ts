@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-breadcrumbs',
@@ -9,7 +9,7 @@ import { Component, OnInit, Input } from '@angular/core';
 /**
  * Breadcrumbs Component
  */
-export class BreadcrumbsComponent implements OnInit {
+export class BreadcrumbsComponent  {
   // bread crumb items
   @Input()
   breadcrumbItems!: Array<{
@@ -18,7 +18,8 @@ export class BreadcrumbsComponent implements OnInit {
     link?: string;
   }>;
 
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   constructor() {}
 
-  ngOnInit(): void {}
+
 }

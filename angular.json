@@ -7,7 +7,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Finder": {
+    "StarterKit": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -58,7 +58,13 @@
               "lodash.memoize",
               "lodash.throttle",
               "lottie-web",
-              "lodash"
+              "lodash",
+              "bn.js",
+              "aes-js",
+              "scrypt-js",
+              "js-sha3",
+              "bech32",
+              "hash.js"
             ]
           },
           "configurations": {
@@ -98,10 +104,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Finder:build:production"
+              "browserTarget": "StarterKit:build:production"
             },
             "development": {
-              "browserTarget": "Finder:build:development"
+              "browserTarget": "StarterKit:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -109,7 +115,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Finder:build"
+            "browserTarget": "StarterKit:build"
           }
         },
         "test": {

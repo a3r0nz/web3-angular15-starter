@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { WalletService } from '../../../services/wallet.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { WalletService } from '../../../services/wallet.service';
   templateUrl: './connected-network.component.html',
   styleUrls: ['./connected-network.component.scss'],
 })
-export class ConnectedNetworkComponent {
+export class ConnectedNetworkComponent implements OnInit {
   isSupportNetwork = true;
   chainName = '';
   chainInfo;
@@ -18,6 +18,7 @@ export class ConnectedNetworkComponent {
   async ngOnInit() {
     await this.refresh();
     this.supportChains = await this._walletService.getSupportChains();
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     this._walletService.getChainSubject().subscribe(async (chain) => {
       await this.refresh();
     });

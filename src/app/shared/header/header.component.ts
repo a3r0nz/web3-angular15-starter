@@ -1,10 +1,9 @@
 import {
   Component,
   OnInit,
-  EventEmitter,
-  Output,
   ViewChild,
   ElementRef,
+  AfterViewInit,
 } from '@angular/core';
 import {
   UntypedFormBuilder,
@@ -30,7 +29,7 @@ import { MenuItem } from './menu.model';
 /**
  * Header Component
  */
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, AfterViewInit {
   mode: string | undefined;
   loginPassfield!: boolean;
   signupPassfield!: boolean;
@@ -157,9 +156,7 @@ export class HeaderComponent implements OnInit {
                 );
                 if (menuelement !== null)
                   if (menuelement.classList.contains('show'))
-                    document
-                      .getElementById('topnav-menu-content')!
-                      .classList.remove('show');
+                    document.getElementById('topnav-menu-content')?.classList.remove('show');
               }
             }
           }

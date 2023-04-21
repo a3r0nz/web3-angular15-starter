@@ -1,16 +1,14 @@
 <a
   class="btn btn-primary btn-sm rounded-pill ms-2"
   *ngIf="!account"
-  (click)="connectWallet()"
->
+  (click)="connectWallet()">
   Connect Wallet
 </a>
 
 <button
   *ngIf="account"
   class="btn btn-outline-primary btn-sm rounded-pill ms-2"
-  (click)="disconnect(disconnectModal)"
->
+  (click)="disconnect(disconnectModal)">
   {{ account | hideAddress }}
 </button>
 
@@ -23,15 +21,13 @@
       type="button"
       class="btn btn-secondary btn-sm"
       data-bs-dismiss="modal"
-      (click)="modal.close('close')"
-    >
+      (click)="modal.close('close')">
       Cancel
     </button>
     <button
       type="button"
       class="btn btn-primary btn-sm"
-      (click)="modal.close('disconnect')"
-    >
+      (click)="modal.close('disconnect')">
       Yes, Disconnect
     </button>
   </div>

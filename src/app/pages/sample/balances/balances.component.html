@@ -8,7 +8,7 @@
         Sample : Balances
       </h1>
       <app-wallet-connect-checker>
-        <div class="text-center mt-5" *ngIf="list.length == 0">
+        <div class="text-center mt-5" *ngIf="list.length === 0">
           <app-spinner></app-spinner>
         </div>
         <div class="row" *ngIf="list.length > 0">
@@ -30,7 +30,7 @@
                     {{
                       token.balance
                         | formatUnit : token.decimals
-                        | number : "1.2-4"
+                        | number : '1.2-4'
                     }}
                   </dd>
                 </dl>

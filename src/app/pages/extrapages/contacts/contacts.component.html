@@ -18,8 +18,7 @@
           class="needs-validation row row-cols-sm-2 row-cols-1 gy-sm-4 gy-3"
           novalidate
           (ngSubmit)="validSubmit()"
-          [formGroup]="validationform"
-        >
+          [formGroup]="validationform">
           <div class="col">
             <label class="form-label" for="c-name">Full Name</label>
             <input
@@ -28,8 +27,7 @@
               type="text"
               required
               formControlName="name"
-              [ngClass]="{ 'is-invalid': submit && form['name'].errors }"
-            />
+              [ngClass]="{ 'is-invalid': submit && form['name'].errors }" />
             <div class="invalid-tooltip mt-1">Please, enter your name</div>
           </div>
           <div class="col">
@@ -40,8 +38,7 @@
               type="email"
               required
               formControlName="email"
-              [ngClass]="{ 'is-invalid': submit && form['email'].errors }"
-            />
+              [ngClass]="{ 'is-invalid': submit && form['email'].errors }" />
             <div class="invalid-tooltip mt-1">Please, enter your email</div>
           </div>
           <div class="col">
@@ -52,8 +49,7 @@
               type="tel"
               required
               formControlName="phone"
-              [ngClass]="{ 'is-invalid': submit && form['phone'].errors }"
-            />
+              [ngClass]="{ 'is-invalid': submit && form['phone'].errors }" />
             <div class="invalid-tooltip mt-1">Please, enter your phone</div>
           </div>
           <div class="col">
@@ -63,8 +59,7 @@
               id="c-subject"
               required
               formControlName="subject"
-              [ngClass]="{ 'is-invalid': submit && form['subject'].errors }"
-            >
+              [ngClass]="{ 'is-invalid': submit && form['subject'].errors }">
               <option value="" selected disabled>Chose subject</option>
               <option value="Subject 1">Subject 1</option>
               <option value="Subject 2">Subject 2</option>
@@ -81,15 +76,15 @@
               placeholder="Leave your message"
               required
               formControlName="message"
-              [ngClass]="{ 'is-invalid': submit && form['message'].errors }"
-            ></textarea>
+              [ngClass]="{
+                'is-invalid': submit && form['message'].errors
+              }"></textarea>
             <div class="invalid-tooltip mt-1">Please, leave your message</div>
           </div>
           <div class="col-12 w-100">
             <button
               class="btn btn-lg btn-primary w-sm-auto w-100 mt-2"
-              type="submit"
-            >
+              type="submit">
               Submit form
             </button>
           </div>

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { ethers } from 'ethers';
 import { Logger } from './logger.service';
@@ -18,6 +19,7 @@ export class WalletService {
   public chain: any;
   public chainSubject = new Subject<any>();
 
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   constructor() {}
 
   async initProvider() {
@@ -84,6 +86,7 @@ export class WalletService {
     return localStorage.getItem('connectStatus');
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   async getAccount(debug = '-1') {
     const enableWallet = localStorage.getItem('connectStatus');
     if (enableWallet === '1') {
