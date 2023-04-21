@@ -1,7 +1,12 @@
 <nav class="mb-3 pt-2 pt-lg-3" aria-label="Breadcrumb">
   <ol class="breadcrumb">
     <ng-container *ngFor="let item of breadcrumbItems">
-      <li class="breadcrumb-item" [ngClass]="{'active': item.active == true}"><a routerLink="{{item.link}}" *ngIf="item.active != true">{{ item.label }}</a><span *ngIf="item.active == true">{{ item.label }}</span></li>
+      <li class="breadcrumb-item" [ngClass]="{ active: item.active == true }">
+        <a routerLink="{{ item.link }}" *ngIf="item.active != true">{{
+          item.label
+        }}</a
+        ><span *ngIf="item.active == true">{{ item.label }}</span>
+      </li>
     </ng-container>
   </ol>
 </nav>

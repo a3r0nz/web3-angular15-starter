@@ -1,15 +1,20 @@
-
 export class Token {
-
-  chainId:number;
-  address:string;
-  decimals:number;
-  symbol:string;
-  name:string;
-  isWrap:boolean;
+  chainId: number;
+  address: string;
+  decimals: number;
+  symbol: string;
+  name: string;
+  isWrap: boolean;
   balance: number;
 
-  constructor(_chainId:number, _address:string, _decimals:number, _symbol:string, _name:string, _isWrap:boolean = false) {
+  constructor(
+    _chainId: number,
+    _address: string,
+    _decimals: number,
+    _symbol: string,
+    _name: string,
+    _isWrap = false
+  ) {
     this.chainId = _chainId;
     this.address = _address;
     this.decimals = _decimals;

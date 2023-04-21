@@ -2,11 +2,10 @@
 // Pagination
 // --------------------------------------------------
 
-
 // Base styles
 
 .page-item {
-  margin: 0 ($spacer * .25);
+  margin: 0 ($spacer * 0.25);
   &.active > .page-link {
     font-weight: $pagination-active-font-weight;
     @include border-radius($pagination-active-border-radius);
@@ -17,20 +16,18 @@
 .page-link {
   > i {
     display: inline-block;
-    margin-top: -.125rem;
+    margin-top: -0.125rem;
     vertical-align: middle;
-    font-size: .7em;
+    font-size: 0.7em;
   }
   &.page-link-static:hover {
     color: $pagination-color;
   }
 }
 
-
 // Light version
 
 .pagination-light {
-
   .page-item {
     &.active .page-link {
       background-color: $pagination-light-active-bg;

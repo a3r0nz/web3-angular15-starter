@@ -20,15 +20,14 @@
   }
 }
 
-
 // Disbale parallax in MS Edge and IE browsers
 
-_:-ms-lang(x), .jarallax .jarallax-img {
+_:-ms-lang(x),
+.jarallax .jarallax-img {
   margin: 0 !important;
   position: absolute !important;
   transform: none !important;
 }
-
 
 // Cursor parallax
 

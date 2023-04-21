@@ -7,7 +7,9 @@
   tbody th {
     color: $table-th-color !important;
   }
-  td { color: $table-color !important; }
+  td {
+    color: $table-color !important;
+  }
 }
 .table-dark td {
   color: $table-dark-color;
@@ -21,7 +23,7 @@
   border-bottom-color: darken($table-border-color, 15%);
 }
 .table.table-dark > :not(:last-child) > :last-child > * {
-  border-bottom-color: rgba($white, .5);
+  border-bottom-color: rgba($white, 0.5);
 }
 
 // Remove highlight border color between thead, tbody and tfoot.

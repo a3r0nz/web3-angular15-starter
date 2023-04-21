@@ -1,36 +1,35 @@
-import {Component} from '@angular/core';
-import {WalletService} from "../../../services/wallet.service";
+import { Component } from '@angular/core';
+import { WalletService } from '../../../services/wallet.service';
 
 @Component({
   selector: 'app-connected-network',
   templateUrl: './connected-network.component.html',
-  styleUrls: ['./connected-network.component.scss']
+  styleUrls: ['./connected-network.component.scss'],
 })
 export class ConnectedNetworkComponent {
-
   isSupportNetwork = true;
-  chainName = ''
+  chainName = '';
   chainInfo;
 
   supportChains;
 
-  constructor(private _walletService:WalletService) { }
+  constructor(private _walletService: WalletService) {}
 
-  async ngOnInit(){
-    await this.refresh()
-    this.supportChains = await this._walletService.getSupportChains()
+  async ngOnInit() {
+    await this.refresh();
+    this.supportChains = await this._walletService.getSupportChains();
     this._walletService.getChainSubject().subscribe(async (chain) => {
-      await this.refresh()
-    })
+      await this.refresh();
+    });
   }
 
-  async refresh(){
-    this.chainInfo = await this._walletService.getChainInfo()
-    if(this.chainInfo){
-      this.chainName = this.chainInfo.chainName
-      this.isSupportNetwork = true
-    }else{
-      this.isSupportNetwork = false
+  async refresh() {
+    this.chainInfo = await this._walletService.getChainInfo();
+    if (this.chainInfo) {
+      this.chainName = this.chainInfo.chainName;
+      this.isSupportNetwork = true;
+    } else {
+      this.isSupportNetwork = false;
     }
   }
 
@@ -46,7 +45,7 @@ export class ConnectedNetworkComponent {
     return false;
   }
 
-  async switchChain(chain:any){
-    await this._walletService.switchNetwork(chain)
+  async switchChain(chain: any) {
+    await this._walletService.switchNetwork(chain);
   }
 }

@@ -1,62 +1,111 @@
- <!-- Navbar-->
- <header class="navbar navbar-expand-lg navbar-light bg-light fixed-top" data-scroll-header (window:scroll)="windowScroll()">
+<!-- Navbar-->
+<header
+  class="navbar navbar-expand-lg navbar-light bg-light fixed-top"
+  data-scroll-header
+  (window:scroll)="windowScroll()"
+>
   <div class="container">
     <a class="navbar-brand me-3 me-xl-4" routerLink="">
-      <img class="d-block" src="assets/img/logo/logo-dark.svg" width="116" alt="Finder">
+      <img
+        class="d-block"
+        src="assets/img/logo/logo-dark.svg"
+        width="116"
+        alt="Finder"
+      />
     </a>
-    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" (click)="toggleMobileMenu()">
+    <button
+      class="navbar-toggler ms-auto"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      (click)="toggleMobileMenu()"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <app-connected-network class=" order-lg-3 d-none d-sm-inline-block"></app-connected-network>
-    <app-connect-wallet-button class=" order-lg-4"></app-connect-wallet-button>
+    <app-connected-network
+      class="order-lg-3 d-none d-sm-inline-block"
+    ></app-connected-network>
+    <app-connect-wallet-button class="order-lg-4"></app-connect-wallet-button>
     <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
-      <ul class="navbar-nav navbar-nav-scroll" style="max-height: 35rem;">
-
+      <ul class="navbar-nav navbar-nav-scroll" style="max-height: 35rem">
         <ng-container *ngFor="let item of menuItems">
           <li class="nav-item dropdown">
-            <a class="nav-link" *ngIf="!item.subItems"
-                (click)="onMenuClick($event)" href="javascript: void(0);" id="topnav-components"
-                routerLink="{{item.link}}" role="button">
-                {{ item.label}}
+            <a
+              class="nav-link"
+              *ngIf="!item.subItems"
+              (click)="onMenuClick($event)"
+              href="javascript: void(0);"
+              id="topnav-components"
+              routerLink="{{ item.link }}"
+              role="button"
+            >
+              {{ item.label }}
             </a>
 
-            <a *ngIf="item.subItems" class="nav-link dropdown-toggle"
-                (click)="onMenuClick($event)" href="javascript:void(0);" id="topnav-components"
-                role="button">
-                {{item.label }}
+            <a
+              *ngIf="item.subItems"
+              class="nav-link dropdown-toggle"
+              (click)="onMenuClick($event)"
+              href="javascript:void(0);"
+              id="topnav-components"
+              role="button"
+            >
+              {{ item.label }}
             </a>
 
-            <ul class="dropdown-menu" aria-labelledby="topnav-dashboard" *ngIf="hasItems(item)">
-              <ng-template ngFor let-i="index" let-subitem [ngForOf]="item.subItems">
-                  <a class="col dropdown-item side-nav-link-ref" *ngIf="!hasItems(subitem)"
-                       routerLink="{{subitem.link}}"
-                      routerLinkActive="active">{{subitem.label }}</a>
+            <ul
+              class="dropdown-menu"
+              aria-labelledby="topnav-dashboard"
+              *ngIf="hasItems(item)"
+            >
+              <ng-template
+                ngFor
+                let-i="index"
+                let-subitem
+                [ngForOf]="item.subItems"
+              >
+                <a
+                  class="col dropdown-item side-nav-link-ref"
+                  *ngIf="!hasItems(subitem)"
+                  routerLink="{{ subitem.link }}"
+                  routerLinkActive="active"
+                  >{{ subitem.label }}</a
+                >
 
-                  <div class="dropdown" *ngIf="hasItems(subitem)">
-                      <a class="dropdown-item dropdown-toggle" href="javascript:void(0);"
-                          (click)="onMenuClick($event)">{{ subitem.label }}
-                          <div class="arrow-down"></div>
-                      </a>
-                      <ul class="dropdown-menu">
-                          <ng-template ngFor let-subSubitem [ngForOf]="subitem.subItems">
-                              <a class="dropdown-item" *ngIf="!hasItems(subSubitem)"
-                                 routerLink="{{subSubitem.link}}"
-                                  routerLinkActive="active">{{ subSubitem.label }}</a>
-                          </ng-template>
-                        </ul>
-                  </div>
+                <div class="dropdown" *ngIf="hasItems(subitem)">
+                  <a
+                    class="dropdown-item dropdown-toggle"
+                    href="javascript:void(0);"
+                    (click)="onMenuClick($event)"
+                    >{{ subitem.label }}
+                    <div class="arrow-down"></div>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <ng-template
+                      ngFor
+                      let-subSubitem
+                      [ngForOf]="subitem.subItems"
+                    >
+                      <a
+                        class="dropdown-item"
+                        *ngIf="!hasItems(subSubitem)"
+                        routerLink="{{ subSubitem.link }}"
+                        routerLinkActive="active"
+                        >{{ subSubitem.label }}</a
+                      >
+                    </ng-template>
+                  </ul>
+                </div>
               </ng-template>
             </ul>
-
           </li>
         </ng-container>
-        </ul>
-
+      </ul>
     </div>
-
-
   </div>
 </header>
 <!-- Page content-->
-

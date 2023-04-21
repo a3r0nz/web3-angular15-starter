@@ -2,7 +2,6 @@
 // Icon box
 // --------------------------------------------------
 
-
 // Media
 
 .icon-box-media {
@@ -17,24 +16,22 @@
     size: cover;
   }
   font-size: $icon-box-media-font-size;
-  line-height: $icon-box-media-width - .25rem;
+  line-height: $icon-box-media-width - 0.25rem;
   text-align: center;
 }
-
 
 // Title
 
 .icon-box-title {
-  margin-bottom: $spacer * .5;
+  margin-bottom: $spacer * 0.5;
   &:not(.text-light):not(.text-white) {
     color: $icon-box-title-color !important;
   }
 }
 
-
 // Hover / active effect
 
-@each $color, $value in map-remove($theme-colors, 'secondary', 'light') {
+@each $color, $value in map-remove($theme-colors, "secondary", "light") {
   .icon-box:hover .icon-box-media.text-#{$color},
   .icon-box.active .icon-box-media.text-#{$color},
   .icon-box.show .icon-box-media.text-#{$color} {

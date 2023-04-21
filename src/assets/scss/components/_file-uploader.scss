@@ -3,7 +3,6 @@
 // based on https://github.com/pqina/filepond
 // --------------------------------------------------
 
-
 .file-uploader {
   margin-bottom: 0;
   border: $border-width dashed $gray-400;
@@ -13,7 +12,9 @@
 }
 .filepond--root .filepond--drop-label {
   min-height: 10rem;
-  > label { cursor: pointer; }
+  > label {
+    cursor: pointer;
+  }
 }
 
 .filepond--panel,
@@ -25,21 +26,23 @@
   background-color: $gray-900 !important;
 }
 
-.filepond--credits { display: none; }
+.filepond--credits {
+  display: none;
+}
 
 @include media-breakpoint-up(sm) {
   .file-uploader-grid {
     .filepond--item {
-      width: calc(50% - .5em);
+      width: calc(50% - 0.5em);
     }
   }
 }
 
-[data-filepond-item-state*='error'] .filepond--item-panel,
-[data-filepond-item-state*='invalid'] .filepond--item-panel {
-    background-color: $danger;
+[data-filepond-item-state*="error"] .filepond--item-panel,
+[data-filepond-item-state*="invalid"] .filepond--item-panel {
+  background-color: $danger;
 }
 
-[data-filepond-item-state='processing-complete'] .filepond--item-panel {
+[data-filepond-item-state="processing-complete"] .filepond--item-panel {
   background-color: $success;
 }

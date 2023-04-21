@@ -4,12 +4,12 @@ export const MENU: MenuItem[] = [
   {
     id: 1,
     label: 'Home',
-    link: '/'
+    link: '/',
   },
   {
     id: 2,
     label: 'Sample',
-    link: '/sample'
+    link: '/sample',
   },
   {
     id: 3,
@@ -19,15 +19,14 @@ export const MENU: MenuItem[] = [
         id: 4,
         label: 'About',
         link: '/pages/about',
-        parentId: 3
+        parentId: 3,
       },
       {
         id: 5,
         label: 'Contact',
         link: '/pages/contacts',
-        parentId: 3
+        parentId: 3,
       },
-    ]
+    ],
   },
 ];
-

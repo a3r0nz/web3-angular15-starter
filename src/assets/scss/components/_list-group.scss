@@ -2,7 +2,6 @@
 // List group
 // --------------------------------------------------
 
-
 // List items
 
 .list-group-item {
@@ -13,21 +12,21 @@
   }
 }
 
-
 // Interactive list items
 
 .list-group-item-action {
   transition: $list-group-action-transition;
-  &:active { transition: none; }
+  &:active {
+    transition: none;
+  }
   &.active {
     border-color: transparent;
   }
 }
 
-
 // Contextual variants
 
-@each $color, $value in map-remove($theme-faded-colors, 'secondary', 'light') {
+@each $color, $value in map-remove($theme-faded-colors, "secondary", "light") {
   .list-group-item-#{$color},
   .list-group-item-#{$color}:hover {
     background-color: $value !important;
@@ -43,7 +42,9 @@
 }
 .list-group-item-secondary {
   background-color: $gray-200 !important;
-  &:hover { background-color: $gray-200 !important; }
+  &:hover {
+    background-color: $gray-200 !important;
+  }
 }
 .list-group-item-dark,
 .list-group-item-dark:hover {

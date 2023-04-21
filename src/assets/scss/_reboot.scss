@@ -11,7 +11,8 @@ html * {
 }
 
 // Sticky footer
-html, body {
+html,
+body {
   height: 100%;
 }
 body {
@@ -26,22 +27,22 @@ body {
   flex-shrink: 0;
 }
 
-
 // Links
 a {
   transition: $link-transition;
-  &:focus { outline: none; }
+  &:focus {
+    outline: none;
+  }
   &:hover > .text-decoration-underline {
     text-decoration: none !important;
   }
 }
 
 // Background transition for links
-a[class^='bg-'],
-a[class*='bg-'] {
-  transition: background-color .25s ease;
+a[class^="bg-"],
+a[class*="bg-"] {
+  transition: background-color 0.25s ease;
 }
-
 
 // Images
 // Responsive images (ensure images don't scale beyond their parents)
@@ -51,7 +52,9 @@ figure {
   height: auto;
   vertical-align: middle;
 }
-svg { max-width: 100%; }
+svg {
+  max-width: 100%;
+}
 
 // Responsive iframes
 iframe {
@@ -71,7 +74,9 @@ strong {
   font-weight: $font-weight-bold;
 }
 
-small { font-weight: inherit; }
+small {
+  font-weight: inherit;
+}
 
 // Disable button :focus outline
 button:focus {
@@ -83,7 +88,6 @@ button:focus {
   width: $border-width;
   height: 100% !important;
 }
-
 
 // Horizontal rule - light version
 .hr-light {

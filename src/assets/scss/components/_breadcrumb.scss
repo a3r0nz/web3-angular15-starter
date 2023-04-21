@@ -2,19 +2,17 @@
 // Breadcrumb
 // --------------------------------------------------
 
-
 // Base
 
 .breadcrumb-item {
   + .breadcrumb-item::before {
-    margin-top: .25rem;
+    margin-top: 0.25rem;
     font: {
       family: $icons-font-family;
-      size: .7em;
+      size: 0.7em;
     }
   }
 }
-
 
 // Dark version
 
@@ -28,7 +26,6 @@
   }
 }
 
-
 // Light version
 
 .breadcrumb-light .breadcrumb-item {
@@ -38,7 +35,9 @@
       color: $breadcrumb-light-hover-color;
     }
   }
-  &.active { color: $breadcrumb-light-active-color; }
+  &.active {
+    color: $breadcrumb-light-active-color;
+  }
   + .breadcrumb-item::before {
     color: $breadcrumb-light-divider-color;
   }

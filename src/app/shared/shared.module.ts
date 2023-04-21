@@ -11,7 +11,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { ConnectWalletButtonComponent } from './components/connect-wallet-button/connect-wallet-button.component';
-import {CorePipesModule} from "../core/pipes/pipes.module";
+import { CorePipesModule } from '../core/pipes/pipes.module';
 import { ConnectedNetworkComponent } from './components/connected-network/connected-network.component';
 import { WalletConnectCheckerComponent } from './components/wallet-connect-checker/wallet-connect-checker.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
@@ -24,7 +24,7 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     ConnectWalletButtonComponent,
     ConnectedNetworkComponent,
     WalletConnectCheckerComponent,
-    SpinnerComponent
+    SpinnerComponent,
   ],
   imports: [
     CommonModule,
@@ -33,8 +33,14 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     ReactiveFormsModule,
     NgbDropdownModule,
     ScrollToModule.forRoot(),
-    CorePipesModule
+    CorePipesModule,
   ],
-  exports: [HeaderComponent, FooterComponent, BreadcrumbsComponent, WalletConnectCheckerComponent, SpinnerComponent]
+  exports: [
+    HeaderComponent,
+    FooterComponent,
+    BreadcrumbsComponent,
+    WalletConnectCheckerComponent,
+    SpinnerComponent,
+  ],
 })
-export class SharedModule { }
+export class SharedModule {}

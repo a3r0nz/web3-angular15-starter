@@ -1,6 +1,6 @@
-import {CHAIN_IDS} from "./chains";
+import { CHAIN_IDS } from "./chains";
 
 export const ROUTER_ADDRESSES = {
-  [CHAIN_IDS.BITKUB_CHAIN]: '',
-  [CHAIN_IDS.BITKUB_CHAIN_TESTNET]: ''
-}
+  [CHAIN_IDS.BITKUB_CHAIN]: "",
+  [CHAIN_IDS.BITKUB_CHAIN_TESTNET]: "",
+};

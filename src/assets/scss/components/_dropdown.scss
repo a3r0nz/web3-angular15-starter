@@ -2,7 +2,6 @@
 // Dropdown
 // --------------------------------------------------
 
-
 // Caret
 
 .dropdown-toggle {
@@ -11,25 +10,33 @@
     display: inline-block;
     font: {
       family: $icons-font-family;
-      size: .65em;
+      size: 0.65em;
       weight: normal;
     }
     vertical-align: middle;
   }
   &::after {
-    margin-left: .5rem;
+    margin-left: 0.5rem;
     content: $fi-chevron-down;
   }
-  &::before { margin-right: .25rem; }
+  &::before {
+    margin-right: 0.25rem;
+  }
 }
 .dropdown-toggle:not(.dropdown-toggle-split) {
-  &::before { margin-left: -.25rem; }
-  &::after { margin-right: -.25rem; }
+  &::before {
+    margin-left: -0.25rem;
+  }
+  &::after {
+    margin-right: -0.25rem;
+  }
 }
 .dropdown .dropdown-toggle,
 .dropup .dropdown-toggle,
 .dropend .dropdown-toggle {
-  &::before { display: none; }
+  &::before {
+    display: none;
+  }
 }
 .dropup .dropdown-toggle::after {
   content: $fi-chevron-up;
@@ -41,16 +48,27 @@
   &::before {
     content: $fi-chevron-left;
   }
-  &::after { display: none; }
+  &::after {
+    display: none;
+  }
 }
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, h5, .h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+h5,
+.h6 {
   .dropdown-toggle::after {
     font-size: $font-size-base;
   }
 }
-
 
 // Dropdown menu
 
@@ -77,19 +95,22 @@ h1, h2, h3, h4, h5, h6,
     }
   }
 
-  &.w-100 { min-width: 100%; }
+  &.w-100 {
+    min-width: 100%;
+  }
 }
 .dropdown-item {
   transition: $link-transition;
-  
+
   > i {
-    margin-top: -.125rem;
-    transition: opacity .25s ease-in-out;
+    margin-top: -0.125rem;
+    transition: opacity 0.25s ease-in-out;
   }
   &:hover > i,
-  &.active > i { opacity: 1 !important; }
+  &.active > i {
+    opacity: 1 !important;
+  }
 }
-
 
 // Dropdown header
 
@@ -98,7 +119,6 @@ h1, h2, h3, h4, h5, h6,
   @include font-size($font-size-base);
 }
 
-
 // Dropdown divider
 
 .dropdown-divider {
@@ -106,30 +126,31 @@ h1, h2, h3, h4, h5, h6,
   margin-left: $dropdown-divider-margin-x;
 }
 
-
 // Dropdown menu animation
 
 .dropdown-menu.show {
-  animation: fade-in .25s ease-in-out;
+  animation: fade-in 0.25s ease-in-out;
 }
-
 
 // Split button dropdown fix
 
 .dropdown-toggle-split::after {
-  margin-left: -.0625rem !important;
+  margin-left: -0.0625rem !important;
 }
-
 
 // Dropdown component animations
 
-@keyframes fade-in  {
-  from { opacity: 0; }
-  to { opacity: 1; }
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @keyframes slide-up {
   from {
-    transform: translateY(.5rem);
+    transform: translateY(0.5rem);
     opacity: 0;
   }
   to {

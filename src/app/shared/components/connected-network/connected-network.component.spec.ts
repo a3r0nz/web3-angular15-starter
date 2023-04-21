@@ -8,9 +8,8 @@ describe('ConnectedNetworkComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ConnectedNetworkComponent ]
-    })
-    .compileComponents();
+      declarations: [ConnectedNetworkComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ConnectedNetworkComponent);
     component = fixture.componentInstance;

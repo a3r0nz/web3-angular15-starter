@@ -5,7 +5,7 @@
  * Theme styles
  */
 
-@import '~dropzone/dist/min/dropzone.min.css';
+@import "~dropzone/dist/min/dropzone.min.css";
 
 // Lightbox
 @import "~ngx-lightbox/lightbox.css";
@@ -29,7 +29,7 @@
 .border-accordion {
   .card {
     border-width: 0;
-    border-bottom: 1px solid $gray-300  !important;
+    border-bottom: 1px solid $gray-300 !important;
     border-radius: 0;
     margin-bottom: 16px;
 
@@ -62,7 +62,7 @@
 
       .accordion-button {
         .nav-link {
-          color: rgba($black, .65);
+          color: rgba($black, 0.65);
           transition: all 0.5s ease;
 
           &:hover {
@@ -73,9 +73,9 @@
     }
   }
   &:last-child {
-      .accordion-item {
-        border: none;
-      }
+    .accordion-item {
+      border: none;
+    }
   }
 }
 
@@ -87,7 +87,7 @@
   }
 }
 
-.accordion-button{
+.accordion-button {
   display: inherit;
 }
 
@@ -141,9 +141,9 @@
 }
 
 swiper {
-  >.swiper {
+  > .swiper {
     &.s-wrapper {
-      .swiper-pagination  {
+      .swiper-pagination {
         .swiper-pagination-handle {
           margin: 0px !important;
           padding: 3px !important;
@@ -153,16 +153,18 @@ swiper {
   }
 }
 
-.swiper-button-next, .swiper-button-prev {
+.swiper-button-next,
+.swiper-button-prev {
   width: 2.25rem !important;
   height: 2.25rem !important;
   background-color: $white;
-  box-shadow: 0 0.125rem 0.125rem -0.125rem rgb(31 27 45 / 8%), 0 0.25rem 0.75rem rgb(31 27 45 / 8%);
+  box-shadow: 0 0.125rem 0.125rem -0.125rem rgb(31 27 45 / 8%),
+    0 0.25rem 0.75rem rgb(31 27 45 / 8%);
   border-radius: 50%;
   &::after {
     font-family: "finder-icons" !important;
     color: $gray-800;
-    font-size: .75rem !important;
+    font-size: 0.75rem !important;
   }
 }
 .swiper-button-prev {
@@ -178,7 +180,8 @@ swiper {
 }
 
 .card {
-  .swiper-button-next,.swiper-button-prev {
+  .swiper-button-next,
+  .swiper-button-prev {
     opacity: 0;
     background-color: transparent;
     box-shadow: none;
@@ -187,7 +190,8 @@ swiper {
     }
   }
   &:hover {
-    .swiper-button-next, .swiper-button-prev {
+    .swiper-button-next,
+    .swiper-button-prev {
       opacity: 1;
     }
   }
@@ -208,7 +212,7 @@ swiper {
 }
 
 .simplebar-track {
-  &.simplebar-horizontal  {
+  &.simplebar-horizontal {
     .simplebar-scrollbar {
       height: 4px !important;
       top: 1px !important;
@@ -224,14 +228,14 @@ swiper {
 }
 
 .ngx-slider-limit {
-  &.ngx-slider-ceil{
+  &.ngx-slider-ceil {
     display: none !important;
   }
 }
 
 /* simplebar-scroll-show */
 .simplebar-scroll-show {
-  .simplebar-scrollbar{
+  .simplebar-scrollbar {
     left: -1px;
     &::before {
       opacity: 1 !important;
@@ -241,17 +245,15 @@ swiper {
   }
 }
 
-.simplebar-track.simplebar-vertical{
+.simplebar-track.simplebar-vertical {
   background: rgba(#09080d, 0.04);
   z-index: -1;
   width: 5px !important;
 }
 
-
-
 /* Custom Css */
 .ngx-slider {
-  .ngx-slider-pointer{
+  .ngx-slider-pointer {
     top: 50% !important;
     width: 1.125rem !important;
     height: 1.125rem !important;
@@ -278,25 +280,25 @@ swiper {
       content: "" !important;
     }
   }
-  .ngx-slider-selection{
+  .ngx-slider-selection {
     background-color: $primary !important;
   }
 }
 
 .ngx-slider {
-  .ngx-slider-bubble{
+  .ngx-slider-bubble {
     padding: 0.25rem 0.5rem !important;
     border: 1px solid $gray-300;
     border-radius: 50rem;
     background-color: $white;
     color: $gray-800 !important;
-    font-size: .75rem !important;
+    font-size: 0.75rem !important;
     line-height: 1.2;
     box-shadow: $box-shadow-sm;
   }
   &.animate {
     .ngx-slider-bubble {
-      &.ngx-slider-limit{
+      &.ngx-slider-limit {
         display: none;
       }
     }
@@ -304,14 +306,14 @@ swiper {
 }
 
 .arrow-none {
-  &::after{
+  &::after {
     display: none;
   }
 }
 
 .pagination-hide {
   margin-bottom: 0px;
-  .swiper-wrapper{
+  .swiper-wrapper {
     padding-bottom: 0px;
   }
   .swiper-pagination {
@@ -322,7 +324,7 @@ swiper {
     .swiper-pagination {
       display: block;
     }
-    .swiper-wrapper{
+    .swiper-wrapper {
       padding-bottom: 45px;
     }
   }
@@ -334,13 +336,14 @@ swiper {
   }
 }
 
-.form-select, .cursor-pointer{
+.form-select,
+.cursor-pointer {
   cursor: pointer;
 }
 
-.swiper-container{
+.swiper-container {
   overflow: hidden;
 }
-swiper{
+swiper {
   height: 100%;
 }

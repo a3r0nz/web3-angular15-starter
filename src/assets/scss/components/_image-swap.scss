@@ -2,7 +2,6 @@
 // Image swap utility
 // ----------------------------------------------------------
 
-
 .swap-image {
   display: inline-block;
   position: relative;
@@ -11,7 +10,7 @@
   .swap-from,
   .swap-to {
     display: block;
-    transition: opacity .3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
   }
 
   .swap-to {
@@ -22,19 +21,29 @@
     z-index: 0;
   }
 
-  &:hover, &.active {
-    .swap-from { opacity: 0; }
-    .swap-to { opacity: 1; }
+  &:hover,
+  &.active {
+    .swap-from {
+      opacity: 0;
+    }
+    .swap-to {
+      opacity: 1;
+    }
   }
 }
-
 
 // Inside card
 
 .card:hover > .swap-image,
 .card.card-active > .swap-image {
   .swap-from,
-  .swap-to { transition-duration: .25s; }
-  .swap-from { opacity: 0; }
-  .swap-to { opacity: 1; }
+  .swap-to {
+    transition-duration: 0.25s;
+  }
+  .swap-from {
+    opacity: 0;
+  }
+  .swap-to {
+    opacity: 1;
+  }
 }

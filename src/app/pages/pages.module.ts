@@ -6,21 +6,19 @@ import { FlatpickrModule } from 'angularx-flatpickr';
 
 // Page Routing
 import { PagesRoutingModule } from './pages-routing.module';
-import { SharedModule } from "../shared/shared.module";
+import { SharedModule } from '../shared/shared.module';
 
 // Light Box
 import { LightboxModule } from 'ngx-lightbox';
 
 @NgModule({
-  declarations: [
-
-  ],
+  declarations: [],
   imports: [
     CommonModule,
     PagesRoutingModule,
     SharedModule,
     FlatpickrModule.forRoot(),
-    LightboxModule
-  ]
+    LightboxModule,
+  ],
 })
-export class PagesModule { }
+export class PagesModule {}

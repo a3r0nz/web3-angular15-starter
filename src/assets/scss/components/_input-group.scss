@@ -2,7 +2,6 @@
 // Input group
 // --------------------------------------------------
 
-
 // Absolutely positioned addons
 
 .input-group .position-absolute {
@@ -13,15 +12,17 @@
   }
 }
 
-
 // Fix checkbox and radio position inside
 
 .input-group .form-check-input {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
-
 
 // Button addons sizing fix
 
-.input-group-lg .btn { @extend .btn-lg; }
-.input-group-sm .btn { @extend .btn-sm; }
+.input-group-lg .btn {
+  @extend .btn-lg;
+}
+.input-group-sm .btn {
+  @extend .btn-sm;
+}

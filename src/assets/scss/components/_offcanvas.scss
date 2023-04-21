@@ -2,16 +2,15 @@
 // Offcanvas
 // --------------------------------------------------
 
-
 // Offcanvas base styles
 
 .offcanvas {
   will-change: transform, box-shadow;
-  transition: transform .4s cubic-bezier(.165, .84, .44, 1), box-shadow .3s ease;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    box-shadow 0.3s ease;
   box-shadow: none;
   visibility: visible !important;
 }
-
 
 // Offcanvas Header and Footer
 
@@ -24,10 +23,9 @@
   padding: $offcanvas-padding-y $offcanvas-padding-x;
 
   .bg-dark & {
-    background-color: rgba($white, .05);
+    background-color: rgba($white, 0.05);
   }
 }
-
 
 // Offcanvas body (content holder)
 
@@ -42,27 +40,30 @@
   }
   &::-webkit-scrollbar-thumb {
     background-color: $scrollbar-bg;
-    @include border-radius($scrollbar-width * .5);
+    @include border-radius($scrollbar-width * 0.5);
   }
   & > .simplebar-track {
     display: block;
     background-color: transparent;
   }
-  .simplebar-vertical { margin-right: .1875rem; }
+  .simplebar-vertical {
+    margin-right: 0.1875rem;
+  }
 
   // Nav inside offcanvas
   > :not(.card) {
-
     .nav {
       flex-direction: column;
       margin: {
         right: -$offcanvas-padding-x;
         left: -$offcanvas-padding-x;
       }
-      > li { margin-bottom: 0; }
+      > li {
+        margin-bottom: 0;
+      }
     }
     &:not(.navbar-nav) .nav-link {
-      padding: .3rem $offcanvas-padding-x;
+      padding: 0.3rem $offcanvas-padding-x;
       font-weight: normal;
       &.active {
         position: relative;
@@ -71,10 +72,10 @@
           position: absolute;
           top: 0;
           left: 0;
-          width: .125rem;
+          width: 0.125rem;
           height: 100%;
           background-color: $nav-link-active-color;
-          content: '';
+          content: "";
         }
       }
     }
@@ -92,19 +93,21 @@
 
 .offcanvas-collapse .card-flush {
   border: 0;
-  > .card-body { padding: 0; }
+  > .card-body {
+    padding: 0;
+  }
 }
-
 
 // Control the breakpoint at which offcanvas expands or collapses
 @include media-breakpoint-up(lg) {
-
   // Expand offcanvas from lg breakpoint
   .offcanvas-expand {
     transform: none;
     &.offcanvas-start,
     &.offcanvas-end,
-    &.offcanvas-bottom { transform: none; }
+    &.offcanvas-bottom {
+      transform: none;
+    }
     z-index: $zindex-fixed + 1;
   }
 
@@ -123,7 +126,9 @@
     background-color: transparent;
 
     .offcanvas-header,
-    .offcanvas-footer { display: none; }
+    .offcanvas-footer {
+      display: none;
+    }
 
     .offcanvas-body {
       padding: 0;

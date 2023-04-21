@@ -3,7 +3,6 @@
 // based on https://github.com/Grsmto/simplebar
 // --------------------------------------------------
 
-
 // Base styles
 
 .simplebar-scrollbar {
@@ -13,7 +12,9 @@
     background-color: $scrollbar-bg;
     @include border-radius($scrollbar-border-radius);
   }
-  &.simplebar-visible::before { opacity: 1; }
+  &.simplebar-visible::before {
+    opacity: 1;
+  }
 }
 
 .simplebar-track {
@@ -42,26 +43,31 @@
 }
 
 [data-simplebar] {
-
-  &[data-simplebar-auto-hide=false] {
-    .simplebar-track { background-color: $scrollbar-track-bg; }
+  &[data-simplebar-auto-hide="false"] {
+    .simplebar-track {
+      background-color: $scrollbar-track-bg;
+    }
   }
 }
-
 
 // Light version
 
 [data-simplebar-inverse] {
-  .simplebar-scrollbar:before { background-color: $scrollbar-light-bg; }
+  .simplebar-scrollbar:before {
+    background-color: $scrollbar-light-bg;
+  }
 
-  &[data-simplebar-auto-hide=false] {
-    .simplebar-track { background-color: $scrollbar-light-track-bg; }
+  &[data-simplebar-auto-hide="false"] {
+    .simplebar-track {
+      background-color: $scrollbar-light-track-bg;
+    }
   }
 }
-
 
 // Scrollbar on top
 
 [data-simplebar-horizontal-top] {
-  .simplebar-track.simplebar-horizontal { top: 0; }
+  .simplebar-track.simplebar-horizontal {
+    top: 0;
+  }
 }

@@ -6,29 +6,28 @@ import { serviceData, peopleData, blogData } from './data';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss']
+  styleUrls: ['./about.component.scss'],
 })
 
 /**
  * About Component
  */
 export class AboutComponent implements OnInit {
-
   // bread crumb items
   breadCrumbItems!: Array<{}>;
   serviceData!: service[];
   blogData!: blog[];
   peopleData!: people[];
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
     /**
      * BreadCrumb
      */
-     this.breadCrumbItems = [
-      { label: 'Home', link:'' },
-      { label: 'About', active: true }
+    this.breadCrumbItems = [
+      { label: 'Home', link: '' },
+      { label: 'About', active: true },
     ];
 
     document.querySelector('.breadcrumb')?.classList.add('breadcrumb-light');
@@ -45,44 +44,43 @@ export class AboutComponent implements OnInit {
     this.blogData = blogData;
   }
 
-   /**
+  /**
    * People Swiper setting
    */
-    people = {
-      initialSlide: 0,
-      slidesPerView: 1,
-      spaceBetween: 25,
-      pagination: true,
-      navigation: true,
-      loop: true,
-      breakpoints:{
-        768:{
-          slidesPerView: 2,
-        },
-        1200:{
-          slidesPerView: 4,
-        }
-      }
-    };
+  people = {
+    initialSlide: 0,
+    slidesPerView: 1,
+    spaceBetween: 25,
+    pagination: true,
+    navigation: true,
+    loop: true,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1200: {
+        slidesPerView: 4,
+      },
+    },
+  };
 
-     /**
+  /**
    * Blog Swiper setting
    */
-    blog = {
-      initialSlide: 0,
-      slidesPerView: 1,
-      spaceBetween: 25,
-      pagination: true,
-      navigation: true,
-      loop: true,
-      breakpoints:{
-        768:{
-          slidesPerView: 2,
-        },
-        1200:{
-          slidesPerView: 3,
-        }
-      }
-    };
-
+  blog = {
+    initialSlide: 0,
+    slidesPerView: 1,
+    spaceBetween: 25,
+    pagination: true,
+    navigation: true,
+    loop: true,
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      1200: {
+        slidesPerView: 3,
+      },
+    },
+  };
 }

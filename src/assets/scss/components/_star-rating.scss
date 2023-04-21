@@ -2,7 +2,6 @@
 // Star rating
 // --------------------------------------------------
 
-
 // Base styles
 
 .star-rating {
@@ -12,7 +11,7 @@
 
 .star-rating-icon {
   display: inline-block;
-  margin-right: .125rem;
+  margin-right: 0.125rem;
   color: $star-rating-icon-color;
   font-size: $star-rating-icon-size;
 
@@ -20,7 +19,6 @@
     color: $star-rating-icon-active-color;
   }
 }
-
 
 // Light version
 
@@ -33,7 +31,6 @@
     }
   }
 }
-
 
 // Sizing
 

@@ -2,14 +2,12 @@
 // Forms
 // --------------------------------------------------
 
-
 // Disabled inputs
 
 .form-control:disabled,
 .form-select:disabled {
   cursor: not-allowed;
 }
-
 
 // Remove default -webkit search input clear button
 
@@ -20,13 +18,11 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
-
 // Disable :focus shadow on certain inputs
 
 .form-control.border-top-0:focus {
   box-shadow: none;
 }
-
 
 // Password visibility toggle
 
@@ -40,24 +36,28 @@ input[type="search"]::-webkit-search-results-decoration {
 .password-toggle-btn {
   position: absolute;
   top: 50%;
-  right: .625rem;
+  right: 0.625rem;
   margin-bottom: 0;
-  padding: $spacer * .5;
+  padding: $spacer * 0.5;
   transform: translateY(-50%);
   font-size: $btn-font-size-lg;
   line-height: 1;
   cursor: pointer;
 
   .password-toggle-indicator {
-    transition: color .2s ease-in-out;
+    transition: color 0.2s ease-in-out;
     color: $input-placeholder-color;
     font: {
       family: $icons-font-family;
-      size: 1.125em;;
+      size: 1.125em;
       style: normal;
     }
-    &::before { content: $fi-eye-on; }
-    &:hover { color: $input-color; }
+    &::before {
+      content: $fi-eye-on;
+    }
+    &:hover {
+      color: $input-color;
+    }
   }
 
   .password-toggle-check {
@@ -74,8 +74,10 @@ input[type="search"]::-webkit-search-results-decoration {
   }
 }
 .form-control-light + .password-toggle-btn .password-toggle-indicator {
-  color: rgba($white, .5);
-  &:hover { color: $white; }
+  color: rgba($white, 0.5);
+  &:hover {
+    color: $white;
+  }
 }
 
 .was-validated .password-toggle .form-control:invalid,
@@ -83,9 +85,10 @@ input[type="search"]::-webkit-search-results-decoration {
 .was-validated .password-toggle .form-control:valid,
 .was-validated .password-toggle .form-control.is-valid {
   padding-right: 4rem;
-  & + .password-toggle-btn { right: 2.1rem; }
+  & + .password-toggle-btn {
+    right: 2.1rem;
+  }
 }
-
 
 // Switches
 
@@ -99,7 +102,6 @@ input[type="search"]::-webkit-search-results-decoration {
     }
   }
 }
-
 
 // Form validation
 
@@ -145,7 +147,6 @@ input[type="search"]::-webkit-search-results-decoration {
   box-shadow: none !important;
 }
 
-
 // Form-check validation highlighting fix
 
 .was-validated .form-check-input:valid:checked,
@@ -164,9 +165,8 @@ input[type="search"]::-webkit-search-results-decoration {
   color: inherit;
 }
 
-
 // Forms light version
-// 
+//
 
 // Input & select
 
@@ -197,7 +197,6 @@ input[type="search"]::-webkit-search-results-decoration {
   }
 }
 
-
 // Select
 
 .form-select {
@@ -208,9 +207,10 @@ input[type="search"]::-webkit-search-results-decoration {
   &:focus {
     background-image: escape-svg($form-select-light-focus-indicator);
   }
-  option { color: initial; }
+  option {
+    color: initial;
+  }
 }
-
 
 // Checkbox & radio
 
@@ -229,7 +229,6 @@ input[type="search"]::-webkit-search-results-decoration {
   }
 }
 
-
 // Switch
 
 .form-switch-light {
@@ -243,7 +242,6 @@ input[type="search"]::-webkit-search-results-decoration {
     color: $form-switch-light-color;
   }
 }
-
 
 // Range slider
 
@@ -265,7 +263,7 @@ input[type="search"]::-webkit-search-results-decoration {
     top: 50%;
     width: $range-slider-handle-size;
     height: $range-slider-handle-size;
-    margin-top: -($range-slider-handle-size * .455);
+    margin-top: -($range-slider-handle-size * 0.455);
     border: 0;
     border-radius: 50%;
     background-color: $range-slider-handle-bg;
@@ -274,30 +272,38 @@ input[type="search"]::-webkit-search-results-decoration {
       position: absolute;
       left: 50%;
       top: 50%;
-      width: ($range-slider-handle-size * .572);
-      height: ($range-slider-handle-size * .572);
+      width: ($range-slider-handle-size * 0.572);
+      height: ($range-slider-handle-size * 0.572);
       margin: {
-        top: -($range-slider-handle-size * .286);
-        left: -($range-slider-handle-size * .286);
+        top: -($range-slider-handle-size * 0.286);
+        left: -($range-slider-handle-size * 0.286);
       }
       border-radius: 50%;
       background-color: $white;
-      content: '';
+      content: "";
     }
-    &::after { display: none; }
-    &:focus { outline: none; }
+    &::after {
+      display: none;
+    }
+    &:focus {
+      outline: none;
+    }
   }
 
-  .noUi-marker-normal { display: none; }
+  .noUi-marker-normal {
+    display: none;
+  }
   .noUi-marker-horizontal {
     &.noUi-marker {
       width: $border-width;
       background-color: darken($border-color, 6%);
     }
-    &.noUi-marker-large { height: .75rem; }
+    &.noUi-marker-large {
+      height: 0.75rem;
+    }
   }
   .noUi-value {
-    padding-top: .125rem;
+    padding-top: 0.125rem;
     color: $body-color;
     font-size: $font-size-sm;
   }
@@ -313,31 +319,30 @@ input[type="search"]::-webkit-search-results-decoration {
     box-shadow: $box-shadow-sm;
   }
 }
-html:not([dir=rtl]) .range-slider-ui.noUi-horizontal .noUi-handle {
-  right: -($range-slider-handle-size * .5);
+html:not([dir="rtl"]) .range-slider-ui.noUi-horizontal .noUi-handle {
+  right: -($range-slider-handle-size * 0.5);
 }
 .range-slider-light .range-slider-ui {
   background-color: $range-slider-light-bg;
 }
-
 
 // Subscription form status
 
 .subscription-status {
   display: table;
   @include border-radius($border-radius-sm);
-  font-size: $font-size-base * .8125;
+  font-size: $font-size-base * 0.8125;
   &.status-success,
   &.status-error {
-    margin-top: .5rem;
-    padding: .25rem .5rem;
+    margin-top: 0.5rem;
+    padding: 0.25rem 0.5rem;
   }
   &.status-success {
-    background-color: rgba($success, .1);
+    background-color: rgba($success, 0.1);
     color: darken($success, 10%);
   }
   &.status-error {
-    background-color: rgba($danger, .1);
+    background-color: rgba($danger, 0.1);
     color: $danger;
   }
 }
