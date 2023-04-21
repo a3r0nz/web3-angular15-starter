@@ -23,7 +23,7 @@
     height: 100%;
     transition: opacity 0.3s ease-in-out;
     background-color: $gallery-overlay-bg;
-    content: "";
+    content: '';
     opacity: 0;
     z-index: 1;
   }
@@ -43,7 +43,7 @@
     transform: scale(0.3);
     color: $gallery-image-indicator-color;
     font: {
-      family: "finder-icons";
+      family: 'finder-icons';
       size: $gallery-image-indicator-font-size;
     }
     text-align: center;

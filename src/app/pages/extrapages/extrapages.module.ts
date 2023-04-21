@@ -1,10 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {
-  NgbCarouselModule,
-  NgbTooltipModule,
-} from '@ng-bootstrap/ng-bootstrap';
+import { NgbCarouselModule, NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 
 // Swiper Slider
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
@@ -26,12 +23,7 @@ import { SortByExtraPagePipe } from '../extrapages/sort-by.pipe';
 import { Page404Component } from './page404/page404.component';
 
 @NgModule({
-  declarations: [
-    AboutComponent,
-    ContactsComponent,
-    SortByExtraPagePipe,
-    Page404Component,
-  ],
+  declarations: [AboutComponent, ContactsComponent, SortByExtraPagePipe, Page404Component],
   imports: [
     CommonModule,
     FormsModule,

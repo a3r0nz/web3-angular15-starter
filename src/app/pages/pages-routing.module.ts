@@ -10,12 +10,11 @@ const routes: Routes = [
   },
   {
     path: '',
-    loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
+    loadChildren: () => import('./home/home.module').then(m => m.HomeModule),
   },
   {
     path: 'pages',
-    loadChildren: () =>
-      import('./extrapages/extrapages.module').then((m) => m.ExtrapagesModule),
+    loadChildren: () => import('./extrapages/extrapages.module').then(m => m.ExtrapagesModule),
   },
 ];
 

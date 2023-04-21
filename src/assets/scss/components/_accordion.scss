@@ -50,14 +50,14 @@
   &::after {
     content: attr(data-bs-label-expanded);
   }
-  > [class^="fi-"],
-  > [class*=" fi-"] {
+  > [class^='fi-'],
+  > [class*=' fi-'] {
     transform: rotate(180deg);
     transition: transform 0.2s ease-in-out;
   }
   &.collapsed {
-    > [class^="fi-"],
-    > [class*=" fi-"] {
+    > [class^='fi-'],
+    > [class*=' fi-'] {
       transform: none;
     }
     &::after {

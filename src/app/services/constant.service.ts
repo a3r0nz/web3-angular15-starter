@@ -1,8 +1,5 @@
 import { Injectable } from '@angular/core';
-import {
-  MAIN_USD_CURRENCY,
-  WRAPPED_NATIVE_CURRENCY,
-} from '../constants/tokens.js';
+import { MAIN_USD_CURRENCY, WRAPPED_NATIVE_CURRENCY } from '../constants/tokens.js';
 import { WalletService } from './wallet.service';
 @Injectable({
   providedIn: 'root',

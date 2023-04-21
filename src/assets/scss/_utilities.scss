@@ -5,16 +5,16 @@
 // highly repetitive declarations
 // --------------------------------------------------
 
-@import "./node_modules/bootstrap/scss/functions";
-@import "./node_modules/bootstrap/scss/variables";
-@import "./node_modules/bootstrap/scss/mixins";
-@import "./node_modules/bootstrap/scss/utilities";
+@import './node_modules/bootstrap/scss/functions';
+@import './node_modules/bootstrap/scss/variables';
+@import './node_modules/bootstrap/scss/mixins';
+@import './node_modules/bootstrap/scss/utilities';
 
 $utilities: map-merge(
   $utilities,
   (
     // Border (sides)
-    "border-top":
+    'border-top':
       (
         property: border-top,
         responsive: true,
@@ -23,7 +23,7 @@ $utilities: map-merge(
           0: 0,
         ),
       ),
-    "border-end": (
+    'border-end': (
       property: border-right,
       class: border-end,
       responsive: true,
@@ -32,7 +32,7 @@ $utilities: map-merge(
         0: 0,
       ),
     ),
-    "border-bottom": (
+    'border-bottom': (
       property: border-bottom,
       responsive: true,
       values: (
@@ -40,7 +40,7 @@ $utilities: map-merge(
         0: 0,
       ),
     ),
-    "border-start": (
+    'border-start': (
       property: border-left,
       class: border-start,
       responsive: true,
@@ -49,7 +49,7 @@ $utilities: map-merge(
         0: 0,
       ),
     ),
-    "border": (
+    'border': (
       property: border,
       class: border,
       responsive: true,
@@ -60,35 +60,35 @@ $utilities: map-merge(
     ),
 
     // Border colors
-    "border-color":
+    'border-color':
       map-merge(
-        map-get($utilities, "border-color"),
+        map-get($utilities, 'border-color'),
         (
           values:
             map-merge(
-              map-get(map-get($utilities, "border-color"), "values"),
+              map-get(map-get($utilities, 'border-color'), 'values'),
               (
-                "light": $border-light-color,
+                'light': $border-light-color,
               )
             ),
         )
       ),
     // Background colors
-    "background-color":
+    'background-color':
       map-merge(
-        map-get($utilities, "background-color"),
+        map-get($utilities, 'background-color'),
         (
           values:
             map-merge(
-              map-get(map-get($utilities, "background-color"), "values"),
+              map-get(map-get($utilities, 'background-color'), 'values'),
               (
-                "transparent": transparent,
+                'transparent': transparent,
               )
             ),
         )
       ),
     // Disable background
-    "background":
+    'background':
       (
         property: background,
         class: bg,
@@ -96,7 +96,7 @@ $utilities: map-merge(
       ),
 
     // Border radius
-    "rounded":
+    'rounded':
       (
         property: border-radius,
         class: rounded,
@@ -114,7 +114,7 @@ $utilities: map-merge(
       ),
 
     // Background faded colors
-    "background-faded-color":
+    'background-faded-color':
       (
         property: background-color,
         class: bg-faded,
@@ -122,7 +122,7 @@ $utilities: map-merge(
       ),
 
     // Disable background image
-    "background-image":
+    'background-image':
       (
         property: background-image,
         class: bg-image,
@@ -130,7 +130,7 @@ $utilities: map-merge(
       ),
 
     // Background size
-    "background-size":
+    'background-size':
       (
         property: background-size,
         class: bg-size,
@@ -141,26 +141,26 @@ $utilities: map-merge(
       ),
 
     // Background position
-    "background-position":
+    'background-position':
       (
         property: background-position,
         class: bg-position,
         values: (
-          "center": center,
-          "center-y": left center,
-          "center-x": center top,
-          "top-right": top right,
-          "top-left": top left,
-          "center-right": center right,
-          "center-left": center left,
-          "bottom-right": bottom right,
-          "bottom-left": bottom left,
-          "bottom-center": bottom center,
+          'center': center,
+          'center-y': left center,
+          'center-x': center top,
+          'top-right': top right,
+          'top-left': top left,
+          'center-right': center right,
+          'center-left': center left,
+          'bottom-right': bottom right,
+          'bottom-left': bottom left,
+          'bottom-center': bottom center,
         ),
       ),
 
     // Background repeat
-    "background-repeat":
+    'background-repeat':
       (
         property: background-repeat,
         class: bg-repeat,
@@ -172,7 +172,7 @@ $utilities: map-merge(
       ),
 
     // Text color
-    "color":
+    'color':
       (
         property: color,
         class: text,
@@ -180,19 +180,19 @@ $utilities: map-merge(
           map-merge(
             $theme-colors,
             (
-              "white": $white,
-              "body": $body-color,
-              "muted": $text-muted,
-              "nav": $nav-link-color,
-              "black-50": rgba($black, 0.5),
-              "white-50": rgba($white, 0.5),
-              "reset": inherit,
+              'white': $white,
+              'body': $body-color,
+              'muted': $text-muted,
+              'nav': $nav-link-color,
+              'black-50': rgba($black, 0.5),
+              'white-50': rgba($white, 0.5),
+              'reset': inherit,
             )
           ),
       ),
 
     // Text shadow
-    "text-shadow":
+    'text-shadow':
       (
         property: text-shadow,
         values: (
@@ -201,7 +201,7 @@ $utilities: map-merge(
       ),
 
     // Width
-    "width":
+    'width':
       (
         property: width,
         class: w,
@@ -216,7 +216,7 @@ $utilities: map-merge(
       ),
 
     // Height
-    "height":
+    'height':
       (
         property: height,
         class: h,
@@ -231,7 +231,7 @@ $utilities: map-merge(
       ),
 
     // Opacity
-    "opacity":
+    'opacity':
       (
         property: opacity,
         class: opacity,
@@ -253,13 +253,13 @@ $utilities: map-merge(
       ),
 
     // Rounded top: 0
-    "rounded-top":
+    'rounded-top':
       map-merge(
-        map-get($utilities, "rounded-top"),
+        map-get($utilities, 'rounded-top'),
         (
           values:
             map-merge(
-              map-get(map-get($utilities, "rounded-top"), "values"),
+              map-get(map-get($utilities, 'rounded-top'), 'values'),
               (
                 0: 0,
               )
@@ -267,13 +267,13 @@ $utilities: map-merge(
         )
       ),
     // Rounded end: 0
-    "rounded-end":
+    'rounded-end':
       map-merge(
-        map-get($utilities, "rounded-end"),
+        map-get($utilities, 'rounded-end'),
         (
           values:
             map-merge(
-              map-get(map-get($utilities, "rounded-end"), "values"),
+              map-get(map-get($utilities, 'rounded-end'), 'values'),
               (
                 0: 0,
               )
@@ -281,13 +281,13 @@ $utilities: map-merge(
         )
       ),
     // Rounded bottom: 0
-    "rounded-bottom":
+    'rounded-bottom':
       map-merge(
-        map-get($utilities, "rounded-bottom"),
+        map-get($utilities, 'rounded-bottom'),
         (
           values:
             map-merge(
-              map-get(map-get($utilities, "rounded-bottom"), "values"),
+              map-get(map-get($utilities, 'rounded-bottom'), 'values'),
               (
                 0: 0,
               )
@@ -295,13 +295,13 @@ $utilities: map-merge(
         )
       ),
     // Rounded start: 0
-    "rounded-start":
+    'rounded-start':
       map-merge(
-        map-get($utilities, "rounded-start"),
+        map-get($utilities, 'rounded-start'),
         (
           values:
             map-merge(
-              map-get(map-get($utilities, "rounded-start"), "values"),
+              map-get(map-get($utilities, 'rounded-start'), 'values'),
               (
                 0: 0,
               )
@@ -309,7 +309,7 @@ $utilities: map-merge(
         )
       ),
     // Z-index
-    "z-index":
+    'z-index':
       (
         property: z-index,
         class: zindex,
@@ -321,8 +321,8 @@ $utilities: map-merge(
 
 // Fix the light border color priority
 
-[class^="border-"],
-[class*=" border-"] {
+[class^='border-'],
+[class*=' border-'] {
   &.border-light {
     border-color: $border-light-color !important;
   }

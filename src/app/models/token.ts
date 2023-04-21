@@ -7,14 +7,7 @@ export class Token {
   isWrap: boolean;
   balance: number;
 
-  constructor(
-    _chainId: number,
-    _address: string,
-    _decimals: number,
-    _symbol: string,
-    _name: string,
-    _isWrap = false
-  ) {
+  constructor(_chainId: number, _address: string, _decimals: number, _symbol: string, _name: string, _isWrap = false) {
     this.chainId = _chainId;
     this.address = _address;
     this.decimals = _decimals;

@@ -6,8 +6,7 @@ const serviceData = [
     icon: 'fi-bed',
     bg_color: 'accent',
     title: 'Safety is our priority',
-    content:
-      'Vel et aliquet diam vulputate hendrerit lorem eget amet adipiscing. At ut ut consectetur in sed.',
+    content: 'Vel et aliquet diam vulputate hendrerit lorem eget amet adipiscing. At ut ut consectetur in sed.',
   },
   {
     icon: 'fi-cash',
@@ -20,8 +19,7 @@ const serviceData = [
     icon: 'fi-heart',
     bg_color: 'primary',
     title: 'Empathy',
-    content:
-      'Id velit, dui condimentum dictumst sapien quis a elementum dignissim. Dignissim ultrices scelerisque.',
+    content: 'Id velit, dui condimentum dictumst sapien quis a elementum dignissim. Dignissim ultrices scelerisque.',
   },
   {
     icon: 'fi-users',
@@ -34,15 +32,13 @@ const serviceData = [
     icon: 'fi-briefcase',
     bg_color: 'primary',
     title: 'Daily hard work',
-    content:
-      'Elementum quisque cursus sagittis purus mauris. Ultrices ut eu egestas at tristique malesuada.',
+    content: 'Elementum quisque cursus sagittis purus mauris. Ultrices ut eu egestas at tristique malesuada.',
   },
   {
     icon: 'fi-chat-left',
     bg_color: 'success',
     title: 'Communication',
-    content:
-      'Faucibus sollicitudin id vitae pharetra tristique cursus id. Blandit at proin purus cursus id sem.',
+    content: 'Faucibus sollicitudin id vitae pharetra tristique cursus id. Blandit at proin purus cursus id sem.',
   },
   {
     icon: 'fi-like',
@@ -55,8 +51,7 @@ const serviceData = [
     icon: 'fi-checkbox-checked-alt',
     bg_color: 'warning',
     title: 'Simple solutions',
-    content:
-      'Porta vulputate commodo ut pulvinar. Fames augue dui faucibus porttitor dis duis id faucibus.',
+    content: 'Porta vulputate commodo ut pulvinar. Fames augue dui faucibus porttitor dis duis id faucibus.',
   },
 ];
 

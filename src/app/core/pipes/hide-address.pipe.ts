@@ -12,10 +12,7 @@ export class HideAddressPipe implements PipeTransform {
       let backLength: any = args[1];
       if (frontLength == undefined) frontLength = 4;
       if (backLength == undefined) backLength = 4;
-      return value.replace(
-        value.substring(frontLength, (value ? value.length : 42) - backLength),
-        '...'
-      );
+      return value.replace(value.substring(frontLength, (value ? value.length : 42) - backLength), '...');
     } else {
       return '';
     }

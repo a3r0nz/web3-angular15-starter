@@ -1,15 +1,5 @@
-import {
-  Component,
-  OnInit,
-  ViewChild,
-  ElementRef,
-  AfterViewInit,
-} from '@angular/core';
-import {
-  UntypedFormBuilder,
-  UntypedFormGroup,
-  Validators,
-} from '@angular/forms';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 
 import { EventService } from '../../core/services/event.service';
 
@@ -49,7 +39,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     private eventService: EventService,
     private formBuilder: UntypedFormBuilder
   ) {
-    router.events.subscribe((event) => {
+    router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         this.activateMenu();
       }
@@ -151,9 +141,7 @@ export class HeaderComponent implements OnInit, AfterViewInit {
               const parent5 = parent4.parentElement;
               if (parent5) {
                 parent5.classList.remove('active');
-                const menuelement = document.getElementById(
-                  'topnav-menu-content'
-                );
+                const menuelement = document.getElementById('topnav-menu-content');
                 if (menuelement !== null)
                   if (menuelement.classList.contains('show'))
                     document.getElementById('topnav-menu-content')?.classList.remove('show');

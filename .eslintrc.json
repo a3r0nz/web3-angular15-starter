@@ -37,9 +37,7 @@
       "rules": {
         "prettier/prettier": ["error", { "parser": "angular" }]
       },
-      "plugins": [
-        "prettier"
-      ]
+      "plugins": ["prettier"]
     }
   ]
 }

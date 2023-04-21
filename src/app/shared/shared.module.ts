@@ -35,12 +35,6 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     ScrollToModule.forRoot(),
     CorePipesModule,
   ],
-  exports: [
-    HeaderComponent,
-    FooterComponent,
-    BreadcrumbsComponent,
-    WalletConnectCheckerComponent,
-    SpinnerComponent,
-  ],
+  exports: [HeaderComponent, FooterComponent, BreadcrumbsComponent, WalletConnectCheckerComponent, SpinnerComponent],
 })
 export class SharedModule {}

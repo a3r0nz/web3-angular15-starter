@@ -26,7 +26,7 @@
 
 // Contextual variants
 
-@each $color, $value in map-remove($theme-faded-colors, "secondary", "light") {
+@each $color, $value in map-remove($theme-faded-colors, 'secondary', 'light') {
   .list-group-item-#{$color},
   .list-group-item-#{$color}:hover {
     background-color: $value !important;

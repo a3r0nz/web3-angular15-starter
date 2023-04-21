@@ -34,8 +34,8 @@ export class EventService {
    */
   subscribe(type: string, callback: EventCallback): Subscription {
     return this.handler
-      .pipe(filter((event) => event.type === type))
-      .pipe(map((event) => event.payload))
+      .pipe(filter(event => event.type === type))
+      .pipe(map(event => event.payload))
       .subscribe(callback);
   }
 }

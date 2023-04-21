@@ -93,7 +93,7 @@
     }
   }
 
-  [data-controls="prev"] {
+  [data-controls='prev'] {
     left: $spacer;
     > i:not(.fi-chevron-up) {
       margin-right: 0.0625rem;
@@ -102,23 +102,21 @@
       margin-bottom: 0.125rem;
     }
   }
-  [data-controls="next"] {
+  [data-controls='next'] {
     right: $spacer;
     > i:not(.fi-chevron-down) {
       margin-left: 0.0625rem;
     }
   }
 
-  &:not(.tns-controls-static):not([class^="tns-controls-outside"]):not(
-      [class*=" tns-controls-outside"]
-    ) {
+  &:not(.tns-controls-static):not([class^='tns-controls-outside']):not([class*=' tns-controls-outside']) {
     [data-controls] {
       opacity: 0;
     }
-    [data-controls="prev"] {
+    [data-controls='prev'] {
       transform: translateX(1rem);
     }
-    [data-controls="next"] {
+    [data-controls='next'] {
       transform: translateX(-1rem);
     }
     &:hover [data-controls] {
@@ -128,8 +126,7 @@
   }
 
   &.tns-nav-outside [data-controls] {
-    margin-top: -(($carousel-controls-size * 0.5) + $carousel-nav-height +
-          1.4rem);
+    margin-top: -(($carousel-controls-size * 0.5) + $carousel-nav-height + 1.4rem);
   }
 }
 
@@ -173,7 +170,7 @@
     }
   }
 
-  [data-controls="prev"] {
+  [data-controls='prev'] {
     > i:not(.fi-chevron-up) {
       margin-right: 0.0625rem;
     }
@@ -181,7 +178,7 @@
       margin-bottom: 0.125rem;
     }
   }
-  [data-controls="next"] {
+  [data-controls='next'] {
     > i:not(.fi-chevron-down) {
       margin-left: 0.0625rem;
     }
@@ -264,10 +261,10 @@
           display: block;
         }
 
-        [data-controls="prev"] {
+        [data-controls='prev'] {
           left: -($carousel-controls-size + 0.75rem);
         }
-        [data-controls="next"] {
+        [data-controls='next'] {
           right: -($carousel-controls-size + 0.75rem);
         }
       }
@@ -316,8 +313,7 @@
     display: block;
     width: 100%;
     transition: $carousel-thumbnail-transition;
-    border: $carousel-thumbnail-border-width solid
-      $carousel-thumbnail-border-color;
+    border: $carousel-thumbnail-border-width solid $carousel-thumbnail-border-color;
     border-radius: $carousel-thumbnail-border-radius;
     opacity: $carousel-thumbnail-opacity;
   }
@@ -365,10 +361,10 @@
       font-size: $carousel-controls-font-size * 1.375;
       box-shadow: none;
     }
-    [data-controls="prev"] {
+    [data-controls='prev'] {
       left: 0.25rem;
     }
-    [data-controls="next"] {
+    [data-controls='next'] {
       right: 0.25rem;
     }
   }

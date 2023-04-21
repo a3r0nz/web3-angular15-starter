@@ -9,13 +9,9 @@ import { Component } from '@angular/core';
 /**
  * Footer Component
  */
-export class FooterComponent  {
-
+export class FooterComponent {
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   constructor() {}
-
-
-
 
   /**
    * SidebarHide modal

@@ -12,11 +12,7 @@ export class ContractService {
 
   async getBalance(token: Token) {
     const publicProvider = await this.walletService.getPublicProvider();
-    const tokenContract: any = await new ethers.Contract(
-      token.address,
-      ERC20_ABI,
-      publicProvider
-    );
+    const tokenContract: any = await new ethers.Contract(token.address, ERC20_ABI, publicProvider);
     return await tokenContract.balanceOf(this.walletService.account);
   }
 }

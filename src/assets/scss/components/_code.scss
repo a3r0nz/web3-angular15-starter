@@ -2,8 +2,8 @@
 // Code
 // --------------------------------------------------
 
-:not(pre) > code[class*="language-"],
-pre[class*="language-"],
+:not(pre) > code[class*='language-'],
+pre[class*='language-'],
 pre {
   margin: 0;
   padding: {
@@ -20,13 +20,13 @@ pre {
   }
 }
 .code-toolbar {
-  :not(pre) > code[class*="language-"],
-  pre[class*="language-"] {
+  :not(pre) > code[class*='language-'],
+  pre[class*='language-'] {
     padding-top: $spacer * 2;
   }
 }
-code[class*="language-"],
-pre[class*="language-"],
+code[class*='language-'],
+pre[class*='language-'],
 pre {
   color: $pre-color;
   text-shadow: none;
@@ -34,8 +34,7 @@ pre {
 
 // Line numbers
 .line-numbers .line-numbers-rows {
-  border-right: $pre-line-numbers-border-width solid
-    $pre-line-numbers-border-color;
+  border-right: $pre-line-numbers-border-width solid $pre-line-numbers-border-color;
   > span::before {
     color: $pre-line-numbers-color;
   }

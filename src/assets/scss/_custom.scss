@@ -5,10 +5,10 @@
  * Theme styles
  */
 
-@import "~dropzone/dist/min/dropzone.min.css";
+@import '~dropzone/dist/min/dropzone.min.css';
 
 // Lightbox
-@import "~ngx-lightbox/lightbox.css";
+@import '~ngx-lightbox/lightbox.css';
 
 .dropzone_sec {
   border: $border-width dashed $gray-400 !important;
@@ -82,7 +82,7 @@
 .dropdown-toggle {
   .arrow-none {
     &::after {
-      content: "";
+      content: '';
     }
   }
 }
@@ -158,24 +158,23 @@ swiper {
   width: 2.25rem !important;
   height: 2.25rem !important;
   background-color: $white;
-  box-shadow: 0 0.125rem 0.125rem -0.125rem rgb(31 27 45 / 8%),
-    0 0.25rem 0.75rem rgb(31 27 45 / 8%);
+  box-shadow: 0 0.125rem 0.125rem -0.125rem rgb(31 27 45 / 8%), 0 0.25rem 0.75rem rgb(31 27 45 / 8%);
   border-radius: 50%;
   &::after {
-    font-family: "finder-icons" !important;
+    font-family: 'finder-icons' !important;
     color: $gray-800;
     font-size: 0.75rem !important;
   }
 }
 .swiper-button-prev {
   &::after {
-    content: "\e951" !important;
+    content: '\e951' !important;
   }
 }
 
 .swiper-button-next {
   &::after {
-    content: "\e952" !important;
+    content: '\e952' !important;
   }
 }
 
@@ -277,7 +276,7 @@ swiper {
       margin-left: -0.32175rem !important;
       border-radius: 50% !important;
       background-color: $white !important;
-      content: "" !important;
+      content: '' !important;
     }
   }
   .ngx-slider-selection {

@@ -31,7 +31,7 @@
 
 // Hover / active effect
 
-@each $color, $value in map-remove($theme-colors, "secondary", "light") {
+@each $color, $value in map-remove($theme-colors, 'secondary', 'light') {
   .icon-box:hover .icon-box-media.text-#{$color},
   .icon-box.active .icon-box-media.text-#{$color},
   .icon-box.show .icon-box-media.text-#{$color} {

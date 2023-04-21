@@ -25,17 +25,17 @@
   &.shadow-sm.show {
     box-shadow: $box-shadow !important;
   }
-  &[class^="bg-"]:hover,
-  &[class*=" bg-"]:hover,
-  &[class*=" bg-"].active,
-  &[class*=" bg-"].show {
+  &[class^='bg-']:hover,
+  &[class*=' bg-']:hover,
+  &[class*=' bg-'].active,
+  &[class*=' bg-'].show {
     background-color: $card-bg !important;
   }
 }
 .card-active {
   box-shadow: $box-shadow-sm;
-  &[class^="bg-"],
-  &[class*=" bg-"] {
+  &[class^='bg-'],
+  &[class*=' bg-'] {
     background-color: $card-bg !important;
   }
 }
@@ -161,7 +161,7 @@ a.card {
   text-decoration: none;
 }
 
-.card[data-bs-toggle="collapse"] {
+.card[data-bs-toggle='collapse'] {
   transition: $card-transition;
   cursor: pointer;
 

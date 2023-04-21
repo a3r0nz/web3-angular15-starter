@@ -24,19 +24,11 @@ export class WalletService {
 
   async initProvider() {
     log.debug('Init provider');
-    this.provider = await new ethers.providers.Web3Provider(
-      window.ethereum,
-      'any'
-    );
+    this.provider = await new ethers.providers.Web3Provider(window.ethereum, 'any');
     this.provider.on('network', async (newNetwork: any, oldNetwork: any) => {
       log.debug('network changed to ' + newNetwork.chainId);
       if (oldNetwork) {
-        log.debug(
-          'Chain changed from ' +
-            oldNetwork.chainId +
-            ' to ' +
-            newNetwork.chainId
-        );
+        log.debug('Chain changed from ' + oldNetwork.chainId + ' to ' + newNetwork.chainId);
         this.chainSubject.next(newNetwork);
         await this.initPublicProvider();
       }
@@ -45,9 +37,7 @@ export class WalletService {
 
   async initPublicProvider() {
     const currentChainInfo = await this.getChainInfo();
-    this.publicProvider = await new ethers.providers.JsonRpcProvider(
-      currentChainInfo.rpcUrls[0]
-    );
+    this.publicProvider = await new ethers.providers.JsonRpcProvider(currentChainInfo.rpcUrls[0]);
   }
 
   async getProvider() {
@@ -68,10 +58,7 @@ export class WalletService {
     log.debug('Set local storage to connected state');
     await localStorage.setItem('connectStatus', '1');
     const _account = await this.getAccount();
-    this.provider = await new ethers.providers.Web3Provider(
-      window.ethereum,
-      'any'
-    );
+    this.provider = await new ethers.providers.Web3Provider(window.ethereum, 'any');
     await this.updateConnectedWallet(_account);
     return _account;
   }
@@ -128,10 +115,7 @@ export class WalletService {
 
   async getChainId() {
     try {
-      this.provider = await new ethers.providers.Web3Provider(
-        window.ethereum,
-        'any'
-      );
+      this.provider = await new ethers.providers.Web3Provider(window.ethereum, 'any');
       const _chainId = await this.provider.getNetwork();
       return _chainId.chainId;
     } catch (e) {
@@ -143,7 +127,7 @@ export class WalletService {
   async getChainInfo() {
     const id = await this.getChainId();
     const chains = await this.getSupportChains();
-    const chain = chains.find((ch) => {
+    const chain = chains.find(ch => {
       return ch.chainIdNumber == id;
     });
     return chain;
@@ -176,17 +160,8 @@ export class WalletService {
         params: [{ chainId: network.chainId }], // chainId must be in hexadecimal numbers
       });
     } catch (error) {
-      const errorCode = error.data
-        ? error.data?.originalError
-          ? error.data?.originalError?.code
-          : 0
-        : 0;
-      if (
-        error.code === 4902 ||
-        errorCode == 4902 ||
-        error.code === -32603 ||
-        errorCode == -32603
-      ) {
+      const errorCode = error.data ? (error.data?.originalError ? error.data?.originalError?.code : 0) : 0;
+      if (error.code === 4902 || errorCode == 4902 || error.code === -32603 || errorCode == -32603) {
         try {
           await window.ethereum.request({
             method: 'wallet_addEthereumChain',

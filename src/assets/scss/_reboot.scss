@@ -39,8 +39,8 @@ a {
 }
 
 // Background transition for links
-a[class^="bg-"],
-a[class*="bg-"] {
+a[class^='bg-'],
+a[class*='bg-'] {
   transition: background-color 0.25s ease;
 }
 

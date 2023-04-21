@@ -43,7 +43,7 @@
 }
 
 [data-simplebar] {
-  &[data-simplebar-auto-hide="false"] {
+  &[data-simplebar-auto-hide='false'] {
     .simplebar-track {
       background-color: $scrollbar-track-bg;
     }
@@ -57,7 +57,7 @@
     background-color: $scrollbar-light-bg;
   }
 
-  &[data-simplebar-auto-hide="false"] {
+  &[data-simplebar-auto-hide='false'] {
     .simplebar-track {
       background-color: $scrollbar-light-track-bg;
     }

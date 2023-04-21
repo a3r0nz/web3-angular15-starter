@@ -9,7 +9,7 @@ import { Component, Input } from '@angular/core';
 /**
  * Breadcrumbs Component
  */
-export class BreadcrumbsComponent  {
+export class BreadcrumbsComponent {
   // bread crumb items
   @Input()
   breadcrumbItems!: Array<{
@@ -20,6 +20,4 @@ export class BreadcrumbsComponent  {
 
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   constructor() {}
-
-
 }

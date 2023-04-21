@@ -11,10 +11,10 @@
 
 // Remove default -webkit search input clear button
 
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration {
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
   display: none;
 }
 
@@ -280,7 +280,7 @@ input[type="search"]::-webkit-search-results-decoration {
       }
       border-radius: 50%;
       background-color: $white;
-      content: "";
+      content: '';
     }
     &::after {
       display: none;
@@ -319,7 +319,7 @@ input[type="search"]::-webkit-search-results-decoration {
     box-shadow: $box-shadow-sm;
   }
 }
-html:not([dir="rtl"]) .range-slider-ui.noUi-horizontal .noUi-handle {
+html:not([dir='rtl']) .range-slider-ui.noUi-horizontal .noUi-handle {
   right: -($range-slider-handle-size * 0.5);
 }
 .range-slider-light .range-slider-ui {

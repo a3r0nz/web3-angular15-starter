@@ -13,12 +13,6 @@ import { LightboxModule } from 'ngx-lightbox';
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-    PagesRoutingModule,
-    SharedModule,
-    FlatpickrModule.forRoot(),
-    LightboxModule,
-  ],
+  imports: [CommonModule, PagesRoutingModule, SharedModule, FlatpickrModule.forRoot(), LightboxModule],
 })
 export class PagesModule {}
