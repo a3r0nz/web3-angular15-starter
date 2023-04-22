@@ -14,6 +14,9 @@
 // Bootstrap
 @import './node_modules/bootstrap/scss/bootstrap';
 
+// import nes
+@import "nes/nes";
+
 // Layout & components
 @import 'reboot';
 @import 'components';
@@ -27,7 +30,6 @@
 // custom styles
 @import 'custom';
 
-@import "nes/nes";
 // override styles
 @import 'override';
 
