@@ -1,22 +1,35 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutComponent } from './@page/about/about.component';
+import { ContactsComponent } from './@page/contacts/contacts.component';
+import { HomeComponent } from './@page/home/home.component';
+import { Page404Component } from './@page/page404/page404.component';
+import { BalancesComponent } from './@page/balances/balances.component';
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule),
+    component: HomeComponent,
   },
   {
-    path: 'pages',
-    loadChildren: () => import('./pages/extrapages/extrapages.module').then(m => m.ExtrapagesModule),
+    path: 'balances',
+    component: BalancesComponent,
   },
   {
-    path: 'sample',
-    loadChildren: () => import('./pages/sample/sample.module').then(m => m.SampleModule),
+    path: 'about',
+    component: AboutComponent,
+  },
+  {
+    path: 'contacts',
+    component: ContactsComponent,
+  },
+  {
+    path: '404',
+    component: Page404Component,
   },
   {
     path: '**',
-    redirectTo: '/pages/404', // Error 404 - Page not found
+    redirectTo: '/404', // Error 404 - Page not found
   },
 ];
 

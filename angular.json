@@ -10,11 +10,21 @@
     "StarterKit": {
       "projectType": "application",
       "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        },
         "@schematics/angular:application": {
           "strict": true
+        },
+        "@schematics/angular:component": {
+          "style": "scss",
+          "skipTests": true
+        },
+        "@schematics/angular:service": {
+          "skipTests": true
+        },
+        "@schematics/angular:pipe": {
+          "skipTests": true
+        },
+        "@schematics/angular:interceptor": {
+          "skipTests": true
         }
       },
       "root": "",
@@ -31,7 +41,11 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.scss", "node_modules/swiper/swiper-bundle.css", "src/assets/scss/theme.scss"],
+            "styles": [
+              "src/styles.scss",
+              "node_modules/swiper/swiper-bundle.css",
+              "src/assets/scss/theme.scss"
+            ],
             "scripts": [],
             "allowedCommonJsDependencies": [
               "dropzone",
